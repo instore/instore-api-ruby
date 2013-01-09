@@ -5,7 +5,7 @@ class Instore
 
 SETUP = { 
 
-		  'menu_category'       	   => ['list', 'create', 'update', 'delete'],  
+		    'menu_category'       	 => ['list', 'create', 'update', 'delete'],  
 	      'menu_item'	    		     => ['add', 'hold'], 
         'tax'            			   => ['list', 'add', 'update', 'remove'],
         'discount'       			   => ['add', 'delete', 'list', 'update'], 
@@ -22,11 +22,15 @@ SETUP = {
 
         }
 
+
+#example of build_url result:
+#list_menu_categories => {:method => :get, :url => '/categories'}
+
 SETUP.each do |k, v|
 
   v.each do |operation|
 
-	build_url({(operation + "_" + fetch_operation(operation, k)[1]).to_sym => {:method => (fetch_operation(operation, k)[0]), :url => ('/' + fetch_base_url(k)) } })
+	build_url ( { ((operation + "_" + fetch_operation(operation, k)[1]).to_sym) => {:method => (fetch_operation(operation, k)[0]), :url => '/' + fetch_base_url(k) } } )
   
   end
 

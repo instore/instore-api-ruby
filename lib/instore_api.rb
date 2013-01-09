@@ -3,11 +3,22 @@ require 'settings'
 
 class Instore
 include HTTParty
-base_uri 'api.instoredoes.com' + @@version + @@api_path
 
 #set the access_token to an instance variable
-def initialize(access_token)
-  @access_token = access_token
+def initialize options={}
+  @access_token = options[:access_token]
+end
+
+#generate code from client_id and redirect_uri arguments
+def generate_code (options={})
+  options[:client_id]    ||= ''
+  options[:redirect_uri] ||= ''
+  self.class.get(@@oauth_uri + '?client_id=' + options[:client_id] + '&redirect_uri=' + options[:redirect_uri])
+end
+
+#generate access_token from client_id, client_secret, and code arguments
+def generate_access_token (options={})
+  self.class.post(@@oauth_uri + '?client_id=' + options[:client_id] + '&client_secret=' + options[:client_secret] + '&code=' + options[:code])
 end
 
 #urls such as list_..., destroy_... are built automatically by lib/actions.rb
@@ -16,8 +27,12 @@ end
 def self.build_url(methods={})
 	methods.each do |k, v|
     define_method k do |options={}|
-  	    options[:id] ||= ''
-  	    self.class.send v[:method], (v[:url] + options[:id] + "?access_token=#{@access_token}"), :query => options
+        options[:id]   ||= ''
+        options[:url2] ||= ''
+        options[:id2]  ||= ''
+        options[:url3] ||= ''
+        options[:id3]  ||= ''
+        self.class.send v[:method], (@@complete_uri + v[:url] + options[:id] + options[:url2] + options[:id2] + options[:url3] + options[:id3] + "?access_token=#{@access_token}"), :query => options
   	end
 	end
 end
@@ -51,7 +66,7 @@ def self.fetch_base_url action
   when 'menu_item'             then 'categories'
   when 'tax'                   then 'taxes'
   when 'discount'              then 'discounts'
-  when 'ingredients'           then 'ingredients'
+  when 'ingredient'            then 'ingredients'
   when 'unique_quality'        then 'unique_qualities'
   when 'location'              then 'locations'
   when 'location_group'        then 'location_groups'
@@ -63,6 +78,7 @@ def self.fetch_base_url action
   when 'order_discount'        then 'orders'
   end
 end 
+
 
 require 'actions'
 debug_output $stdout if @@debug == true
