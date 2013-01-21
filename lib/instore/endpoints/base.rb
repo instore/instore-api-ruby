@@ -3,7 +3,8 @@ require 'httparty'
 module Instore
   module EndPoints
     class BaseResponse
-      def initialize(access_token, attributes_hash)
+      def initialize(host, access_token, attributes_hash)
+        @host = host
         @access_token = access_token
 
         attributes_hash.each do |name, value| 
@@ -20,11 +21,15 @@ module Instore
     class Base
       include ::HTTParty
       format :json
-      base_uri 'http://own-dev3.railwaymen.org:4006/v1/api'
 
-      @@response_class = BaseResponse
+      def self.response_class(klass)
+        @@response_class = klass
+      end
 
-      def initialize(access_token, options = {})
+      response_class BaseResponse
+
+      def initialize(host, access_token, options = {})
+        @host = host
         @access_token = access_token
         @options = options
         @prepend_path = @options[:prepend_path]
@@ -33,7 +38,11 @@ module Instore
       end
 
       def path
-        "#{@prepend_path}/#{resource}"
+        if @prepend_path
+          "#{@host}/v1/api/#{@prepend_path}/#{resource}"
+        else
+          "#{@host}/v1/api/#{resource}"
+        end
       end
 
       def create(params = {})
@@ -64,7 +73,7 @@ module Instore
       private
 
       def build_response(hash)
-        @@response_class.new(@access_token, hash)
+        @@response_class.new(@host, @access_token, hash)
       end
 
       def build_response_collection(array)

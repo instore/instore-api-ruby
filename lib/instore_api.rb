@@ -1,5 +1,4 @@
 require 'instore/api'
-# require 'settings'
 
 module Instore
   # include HTTParty
@@ -84,6 +83,3 @@ module Instore
   # debug_output $stdout if @@debug == true
 
 end
-
-
-
