@@ -10,6 +10,7 @@ require 'instore/endpoints/location_groups'
 require 'instore/endpoints/taxes'
 require 'instore/endpoints/unique_qualities'
 require 'instore/endpoints/orders'
+require 'instore/endpoints/payments'
 
 module Instore
   class Api
@@ -67,6 +68,10 @@ module Instore
 
     def orders
       EndPoints::Orders.new(@host, @access_token)
+    end
+
+    def payments
+      EndPoints::Payments.new(@host, @access_token)
     end
   end
 end
