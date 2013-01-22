@@ -1,0 +1,32 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/unique_qualities?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Mon, 21 Jan 2013 20:05:32 GMT; httpOnly
+      Content-Length:
+      - '3644'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 21 Jan 2013 16:05:32 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"id":"849e5c92-271f-48fc-ae42-38b67176b492","name":"Eggs","active":true,"created_at":"2011-03-01T10:57:34.886Z","updated_at":"2011-03-01T10:57:34.886Z"},{"id":"592aeb85-8262-4351-b240-9ff85406cda9","name":"Milk","active":true,"created_at":"2011-03-01T10:57:34.893Z","updated_at":"2011-03-01T10:57:34.893Z"},{"id":"355231d4-a207-4bc6-993c-44ca2d425d7f","name":"Peanuts","active":true,"created_at":"2011-03-01T10:57:34.896Z","updated_at":"2011-03-01T10:57:34.896Z"},{"id":"7c113b90-9584-4674-8721-0c3550d862d4","name":"Tree
+        Nuts","active":true,"created_at":"2011-03-01T10:57:34.898Z","updated_at":"2011-03-01T10:57:34.898Z"},{"id":"9f46d82f-249e-414e-92b6-dd78fc960f46","name":"Fish","active":true,"created_at":"2011-03-01T10:57:34.901Z","updated_at":"2011-03-01T10:57:34.901Z"},{"id":"9c7813fb-61c1-44c5-ae1c-090f770b39c7","name":"Shellfish","active":true,"created_at":"2011-03-01T10:57:34.904Z","updated_at":"2011-03-01T10:57:34.904Z"},{"id":"6902541a-4f80-4d3a-8d5a-4b7294fa0d5f","name":"Soy","active":true,"created_at":"2011-03-01T10:57:34.906Z","updated_at":"2011-03-01T10:57:34.906Z"},{"id":"b5ad3942-90d4-4fb3-b769-7fa289193cd5","name":"Pork","active":true,"created_at":"2011-03-01T10:57:34.909Z","updated_at":"2011-03-01T10:57:34.909Z"},{"id":"9870445d-47b9-4008-beda-19486ef71da4","name":"Wheat","active":true,"created_at":"2011-03-01T10:57:34.911Z","updated_at":"2011-03-01T10:57:34.911Z"},{"id":"73edb91e-ef48-4150-9615-a60bda691c34","name":"Halal","active":true,"created_at":"2011-03-01T10:57:34.914Z","updated_at":"2011-03-01T10:57:34.914Z"},{"id":"6509ac6c-ad4c-468a-a081-30fa2eb301e0","name":"Kosher","active":true,"created_at":"2011-03-01T10:57:34.917Z","updated_at":"2011-03-01T10:57:34.917Z"},{"id":"62688fc3-6fb1-403c-ac8f-9c1fc4b775e4","name":"Vegetarian","active":true,"created_at":"2011-03-01T10:57:34.919Z","updated_at":"2011-03-01T10:57:34.919Z"},{"id":"bc35cf3b-6856-4621-be19-ddf903ba928b","name":"Vegan","active":true,"created_at":"2011-03-01T10:57:34.922Z","updated_at":"2011-03-01T10:57:34.922Z"},{"id":"2d6df400-f199-4057-9d62-ac819347aaa2","name":"Gluten-free","active":true,"created_at":"2011-03-01T10:57:34.924Z","updated_at":"2011-03-01T10:57:34.924Z"},{"id":"d32cd6ef-0fc4-433e-8fb2-e788f23db701","name":"Fair-trade","active":true,"created_at":"2011-03-01T10:57:34.927Z","updated_at":"2011-03-01T10:57:34.927Z"},{"id":"7173f7e7-1af5-427f-8adf-2e83044d78fd","name":"Organic","active":true,"created_at":"2011-03-01T10:57:34.929Z","updated_at":"2011-03-01T10:57:34.929Z"},{"id":"30329b0c-bd55-41bb-a4d8-86c8f7107352","name":"Pork","active":true,"created_at":"2012-06-04T22:45:15.861Z","updated_at":"2012-06-04T22:45:15.861Z"},{"id":"6be8167b-476a-488a-914a-39994c7d36b7","name":"Wheat","active":true,"created_at":"2012-06-04T22:45:15.875Z","updated_at":"2012-06-04T22:45:15.875Z"},{"id":"9712005c-e6b6-4a91-ba9d-1d7b0f02089e","name":"Vegetarian","active":true,"created_at":"2012-06-13T15:06:10.384Z","updated_at":"2012-06-13T15:06:10.384Z"},{"id":"3ae128c3-5752-4748-9a06-8a9a85d588a3","name":"Vegan","active":true,"created_at":"2012-06-13T15:06:10.415Z","updated_at":"2012-06-13T15:06:10.415Z"}],"count":20,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":"http://own-dev3.railwaymen.org:4006/v1/api/unique_qualities?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=2"}}'
+    http_version: 
+  recorded_at: Mon, 21 Jan 2013 16:05:32 GMT
+recorded_with: VCR 2.4.0

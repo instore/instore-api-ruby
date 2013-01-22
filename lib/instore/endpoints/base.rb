@@ -45,15 +45,15 @@ module Instore
         end
       end
 
-      def create(params = {})
+      def create_resource(params = {})
         build_response self.class.post(path, {body: params}.merge(@options))
       end
 
-      def update(id, params = {})
+      def update_resource(id, params = {})
         build_response self.class.put("#{path}/#{id}", {body: params}.merge(@options))
       end
 
-      def destroy(id)
+      def destroy_resource(id)
         build_response self.class.delete("#{path}/#{id}", @options)
       end
 

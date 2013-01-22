@@ -4,6 +4,7 @@ require 'instore/endpoints/discounts'
 require 'instore/endpoints/locations'
 require 'instore/endpoints/location_groups'
 require 'instore/endpoints/taxes'
+require 'instore/endpoints/unique_qualities'
 
 module Instore
   class Api
@@ -37,6 +38,10 @@ module Instore
 
     def taxes
       EndPoints::Taxes.new(@host, @access_token)
+    end
+
+    def unique_qualities
+      EndPoints::UniqueQualities.new(@host, @access_token)
     end
   end
 end
