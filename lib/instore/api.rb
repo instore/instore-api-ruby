@@ -1,6 +1,7 @@
 require 'instore/endpoints/categories'
 require 'instore/endpoints/items'
 require 'instore/endpoints/item_sizes'
+require 'instore/endpoints/special_qualities'
 require 'instore/endpoints/ingredients'
 require 'instore/endpoints/discounts'
 require 'instore/endpoints/locations'
@@ -29,6 +30,10 @@ module Instore
 
     def item_sizes
       EndPoints::ItemSizes.new(@host, @access_token)
+    end
+
+    def special_qualities
+      EndPoints::SpecialQualities.new(@host, @access_token)
     end
 
     def ingredients
