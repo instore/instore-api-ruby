@@ -2,9 +2,9 @@ require 'instore/endpoints/base'
 
 module Instore
   module EndPoints
-    class SpecialQualities < Base
+    class ItemIngredients < Base
       def resource
-        "special_qualities"
+        "item_ingredients"
       end
 
       def create(params = {})
