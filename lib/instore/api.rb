@@ -1,5 +1,6 @@
 require 'instore/endpoints/categories'
 require 'instore/endpoints/items'
+require 'instore/endpoints/item_sizes'
 require 'instore/endpoints/ingredients'
 require 'instore/endpoints/discounts'
 require 'instore/endpoints/locations'
@@ -24,6 +25,10 @@ module Instore
 
     def items
       EndPoints::Items.new(@host, @access_token)
+    end
+
+    def item_sizes
+      EndPoints::ItemSizes.new(@host, @access_token)
     end
 
     def ingredients
