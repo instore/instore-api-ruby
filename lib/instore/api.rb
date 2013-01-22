@@ -10,6 +10,7 @@ require 'instore/endpoints/location_groups'
 require 'instore/endpoints/taxes'
 require 'instore/endpoints/unique_qualities'
 require 'instore/endpoints/orders'
+require 'instore/endpoints/order_lines'
 require 'instore/endpoints/payments'
 
 module Instore
@@ -68,6 +69,10 @@ module Instore
 
     def orders
       EndPoints::Orders.new(@host, @access_token)
+    end
+
+    def order_lines
+      EndPoints::OrderLines.new(@host, @access_token)
     end
 
     def payments

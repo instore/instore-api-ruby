@@ -1,0 +1,31 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/order_lines/d9345047-1fa2-17e3-4178-5dace041ec83?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Tue, 22 Jan 2013 19:07:39 GMT; httpOnly
+      Content-Length:
+      - '998'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 22 Jan 2013 15:07:39 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","order_id":"a30b292f-1feb-002d-9306-082699d83a21","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","item_size_id":"424b9981-c10f-4d0c-a867-f9ea8fec0789","item_total":0,"quantity":1,"void_refund_id":null,"void_refund_time":null,"state":null,"discount_amount":0,"discount_percent":0,"tax":0,"tax_percent":5,"is_universal_tax":null,"no_tax":false,"net_price_pure":2,"net_price_single":2,"gross_price":2,"gross_price_total":2,"net_price_ingredients":0,"gross_price_ingredients":0,"discount_total":0,"discount_item":0,"discount_item_pure":0,"discount_item_ingredients":0,"discount_global":0,"discount_ingredients":0,"tax_individual":false,"tax_total":0.1,"tax_ingredients":0,"tax_item":0.1,"item_size_name":null,"item_name":null,"takeout":null,"created_at":"2013-01-22T15:06:52.432Z","updated_at":"2013-01-22T15:06:52.468Z","item_sales_tax":0},"scope":"api","status":true,"code":"ok","message":""}'
+    http_version: 
+  recorded_at: Tue, 22 Jan 2013 15:07:39 GMT
+recorded_with: VCR 2.4.0
