@@ -57,6 +57,10 @@ module Instore
         build_response self.class.delete("#{path}/#{id}", @options)
       end
 
+      def find(id)
+        build_response self.class.get("#{path}/#{id}", @options)
+      end
+
       def first
         fetch.first
       end

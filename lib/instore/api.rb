@@ -1,10 +1,12 @@
 require 'instore/endpoints/categories'
+require 'instore/endpoints/items'
 require 'instore/endpoints/ingredients'
 require 'instore/endpoints/discounts'
 require 'instore/endpoints/locations'
 require 'instore/endpoints/location_groups'
 require 'instore/endpoints/taxes'
 require 'instore/endpoints/unique_qualities'
+require 'instore/endpoints/orders'
 
 module Instore
   class Api
@@ -18,6 +20,10 @@ module Instore
 
     def categories
       EndPoints::Categories.new(@host, @access_token)
+    end
+
+    def items
+      EndPoints::Items.new(@host, @access_token)
     end
 
     def ingredients
@@ -42,6 +48,10 @@ module Instore
 
     def unique_qualities
       EndPoints::UniqueQualities.new(@host, @access_token)
+    end
+
+    def orders
+      EndPoints::Orders.new(@host, @access_token)
     end
   end
 end

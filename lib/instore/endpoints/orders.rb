@@ -2,9 +2,9 @@ require 'instore/endpoints/base'
 
 module Instore
   module EndPoints
-    class Items < Base
+    class Orders < Base
       def resource
-        "items"
+        "orders"
       end
 
       def create(params = {})
@@ -15,8 +15,12 @@ module Instore
         update_resource(id, params)
       end
 
-      def destroy(id)
-        destroy_resource(id)
+      def void(id)
+        build_response self.class.post("#{path}/#{id}/void", @options)
+      end
+
+      def refund(id)
+        build_response self.class.post("#{path}/#{id}/refund", @options)
       end
     end
   end
