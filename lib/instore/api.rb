@@ -12,6 +12,7 @@ require 'instore/endpoints/unique_qualities'
 require 'instore/endpoints/orders'
 require 'instore/endpoints/order_lines'
 require 'instore/endpoints/order_line_ingredients'
+require 'instore/endpoints/applied_discounts'
 require 'instore/endpoints/payments'
 
 module Instore
@@ -78,6 +79,10 @@ module Instore
 
     def order_line_ingredients
       EndPoints::OrderLineIngredients.new(@host, @access_token)
+    end
+
+    def applied_discounts
+      EndPoints::AppliedDiscounts.new(@host, @access_token)
     end
 
     def payments
