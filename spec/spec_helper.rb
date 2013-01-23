@@ -1,4 +1,4 @@
-require 'instore_api'
+require 'instore'
 require 'vcr'
 
 RSpec.configure do |config|
