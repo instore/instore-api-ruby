@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://own-dev3.railwaymen.org:4006/v1/api/categories?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    uri: https://api.instoredoes.com/v1/api/categories?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
     body:
       encoding: US-ASCII
       string: ''
@@ -26,12 +26,12 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"scope":"api","data":[{"id":"17b530c0-fd28-4091-94b0-aab2417936ae","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
-        99!","active":true,"position":0,"created_at":"2013-01-21T10:42:33.602Z","updated_at":"2013-01-21T11:02:54.402Z","items":{"data":[],"count":3,"paging":{"fetch":"http://own-dev3.railwaymen.org:4006/v1/api/categories/17b530c0-fd28-4091-94b0-aab2417936ae/items?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=1"}}},{"id":"6511f34c-beea-0488-170c-82038ee1306f","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test!","active":false,"position":null,"created_at":"2013-01-21T10:38:53.590Z","updated_at":"2013-01-21T10:53:42.240Z","items":{"data":[],"count":0,"paging":{"fetch":null}}}],"count":2,"status":true,"code":"ok","message":"","paging":{"previous":null,"next":null}}'
+        99!","active":true,"position":0,"created_at":"2013-01-21T10:42:33.602Z","updated_at":"2013-01-21T11:02:54.402Z","items":{"data":[],"count":3,"paging":{"fetch":"https://api.instoredoes.com/v1/api/categories/17b530c0-fd28-4091-94b0-aab2417936ae/items?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=1"}}},{"id":"6511f34c-beea-0488-170c-82038ee1306f","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test!","active":false,"position":null,"created_at":"2013-01-21T10:38:53.590Z","updated_at":"2013-01-21T10:53:42.240Z","items":{"data":[],"count":0,"paging":{"fetch":null}}}],"count":2,"status":true,"code":"ok","message":"","paging":{"previous":null,"next":null}}'
     http_version: 
   recorded_at: Mon, 21 Jan 2013 13:12:00 GMT
 - request:
     method: get
-    uri: http://own-dev3.railwaymen.org:4006/v1/api/categories/17b530c0-fd28-4091-94b0-aab2417936ae/items?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    uri: https://api.instoredoes.com/v1/api/categories/17b530c0-fd28-4091-94b0-aab2417936ae/items?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
     body:
       encoding: US-ASCII
       string: ''

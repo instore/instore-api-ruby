@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://own-dev3.railwaymen.org:4006/v1/api/item_sizes?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    uri: https://api.instoredoes.com/v1/api/item_sizes?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
     body:
       encoding: US-ASCII
       string: ''
@@ -45,7 +45,7 @@ http_interactions:
         Size","active":false,"price":8.5,"position":0,"created_at":"2013-01-09T08:31:32.191Z","updated_at":"2013-01-09T08:32:09.091Z"},{"id":"83e411ac-6cce-42a1-aab9-c8afcd4f018a","location_id":null,"item_id":"b7ec1412-f9b8-4bfc-82dd-25cbe3bffd9e","name":"One
         Size","active":false,"price":0,"position":0,"created_at":"2013-01-09T08:30:59.213Z","updated_at":"2013-01-09T08:32:09.084Z"},{"id":"97e788f4-ade8-40de-80a9-e3c613a8bb49","location_id":null,"item_id":"d81915d7-6a08-43f3-88fe-e69bab1bb068","name":"One
         Size","active":false,"price":0,"position":0,"created_at":"2013-01-09T08:27:05.712Z","updated_at":"2013-01-09T08:30:25.273Z"},{"id":"7f97ab92-3c22-464f-a5bf-e896b65956be","location_id":null,"item_id":"611c1be2-8a81-4783-af7a-403111745abf","name":"One
-        Size","active":true,"price":6,"position":0,"created_at":"2013-01-08T15:18:14.980Z","updated_at":"2013-01-08T15:18:14.980Z"}],"count":20,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":"http://own-dev3.railwaymen.org:4006/v1/api/item_sizes?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=2"}}'
+        Size","active":true,"price":6,"position":0,"created_at":"2013-01-08T15:18:14.980Z","updated_at":"2013-01-08T15:18:14.980Z"}],"count":20,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":"https://api.instoredoes.com/v1/api/item_sizes?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=2"}}'
     http_version: 
   recorded_at: Thu, 24 Jan 2013 10:14:59 GMT
 recorded_with: VCR 2.4.0
