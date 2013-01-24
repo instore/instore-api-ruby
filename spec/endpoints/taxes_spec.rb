@@ -13,6 +13,13 @@ describe 'Instore::Api#taxes' do
     end
   end
 
+  it 'should fetch tax' do
+    VCR.use_cassette('taxes/show') do
+      tax = instore.taxes.find('258d9dcc-30b4-652a-56a5-e24b918308b2')
+      tax.status.should be_true
+    end
+  end
+
   it 'should create tax' do
     VCR.use_cassette('taxes/create') do
       response = instore.taxes.create(location_id: location_id, tax_rate: 5, name: 'Test tax 7!')

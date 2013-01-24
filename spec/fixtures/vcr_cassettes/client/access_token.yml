@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.instoredoes.com/oauth/access_token
+    body:
+      encoding: US-ASCII
+      string: grant_type=authorization_code&code=ZOuac1-X_7mxKDbpeNIE2qcuC1D62Pedwt6eRdDK7yf&client_id=346C7E9A9577844A1DD7&client_secret=A777255B68BDDDE0AC3015D056E17364E3DEF85F
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=e30%3D--6ee4d714cfa7e28428d63b6002fca2ef80b1ce0d; path=/; expires=Thu,
+        24 Jan 2013 18:26:42 GMT; httpOnly
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 24 Jan 2013 14:26:42 GMT
+      Connection:
+      - keep-alive
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '{"access_token":"Topjofc_dgUYz988Gfh8nDaYHaE=Lzo8LgsHad42911e7b88e95b264c122a614f3481d8b2c284bc1c8185cc253cf6fd5e555f760e02da7d911c505db86947f28603f3db4ebb53b5b0c3436cfb8b4a7ed94021f57d265dd7541031c2b75995e6d07cb7ab8778862c3aeffa578b435bb20b4aaa09cdffa5c8ee9af0118716951a305e7fe17d3c84a013414375c4cde62f366ca0a0b3191ab091bbf8b07d3b27f822e5e0","refresh_token":null}'
+    http_version: 
+  recorded_at: Thu, 24 Jan 2013 14:26:42 GMT
+recorded_with: VCR 2.4.0

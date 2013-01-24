@@ -13,6 +13,13 @@ describe 'Instore::Api#discounts' do
     end
   end
 
+  it 'should fetch discount' do
+    VCR.use_cassette('discounts/show') do
+      discount = instore.discounts.find('4d0ae4f3-5b6f-663a-d1c9-93b87d1a5ee4')
+      discount.status.should be_true
+    end
+  end
+
   it 'should create discount' do
     VCR.use_cassette('discounts/create') do
       response = instore.discounts.create(location_id: location_id, percent: 15, calculations_base: 'percent', name: 'Test discount 4!')
