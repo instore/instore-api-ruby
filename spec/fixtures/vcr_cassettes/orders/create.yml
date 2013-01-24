@@ -1,0 +1,31 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/orders?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: location_id=1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Tue, 22 Jan 2013 12:41:41 GMT; httpOnly
+      Content-Length:
+      - '1222'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 22 Jan 2013 08:41:41 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":"97bdeb9b-d4bf-bddb-aa5a-6368d2b9f4ea","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","user_id":"24826684-90d7-41ee-ba0c-4e989b4f88a4","credit_card_transaction_id":null,"open":null,"status":null,"sub_total":0,"sales_tax":0,"total":0,"void_refund_id":null,"void_refund_time":null,"state":"incomplete","order_no":null,"line_item_quantity":null,"different_line_item_quantity":null,"suggestions_quantity":null,"discount_amount":0,"discount_percent":0,"time_zone_stamp":null,"no_tax":false,"terminal_id":null,"bill_number":null,"total_without_gift_cards":0,"gift_cards_count":0,"net_price_pure":0,"net_price":0,"net_price_with_gift_card":0,"discount_global":0,"discount_item":0,"discount_total":0,"tax_item":0,"tax_global":0,"tax_total":0,"gross_price":0,"gross_price_with_gift_card":0,"gross_price_total":0,"gross_price_total_with_gift_card":0,"left_to_pay":0,"no_tax_reason":null,"takeout":null,"created_at":"2013-01-22T08:41:41.510Z","updated_at":"2013-01-22T08:41:41.512Z","order_lines":{"data":[],"count":0},"payments":{"data":[],"count":0},"applied_discounts":{"data":[],"count":0},"hold_orders":{"data":[],"count":0},"tips":{"data":[],"count":0}},"scope":"api","status":true,"code":"ok","message":""}'
+    http_version: 
+  recorded_at: Tue, 22 Jan 2013 08:41:41 GMT
+recorded_with: VCR 2.4.0

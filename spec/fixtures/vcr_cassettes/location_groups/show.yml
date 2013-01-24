@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/location_groups/de99abb1-f0e9-51d3-3386-72bd77c24590?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        Y29ubmVjdC5zaWQ9ZXlKMWMyVnlJam9pTWpRNE1qWTJPRFF0T1RCa055MDBN
+        V1ZsTFdKaE1HTXROR1U1T0RsaU5HWTRPR0UwSWl3aWRYTmxjbDlwWkNJNklq
+        STBPREkyTmpnMExUa3daRGN0TkRGbFpTMWlZVEJqTFRSbE9UZzVZalJtT0Ro
+        aE5DSXNJbU5zYVdWdWRGOXBaQ0k2SWtaRE9URkNPRUk0TUVFeU1rTkZORUZD
+        TmtaQ0lpd2lZV05qYjNWdWRGOXBaQ0k2SW1aa09EUmlOR1U0TFRWa01HTXRO
+        REJpWmkxaVpURTRMV0pqWWprME1qTTVNbU5qWlNJc0ltUmhkR0VpT25zaVlX
+        TmpiM1Z1ZEY5cFpDSTZJbVprT0RSaU5HVTRMVFZrTUdNdE5EQmlaaTFpWlRF
+        NExXSmpZamswTWpNNU1tTmpaU0o5ZlElM0QlM0QtLTMwZDUzZWI4ZDIzNDNk
+        MTE4NTc4YjhlODg4Mjg1NGI5Mjc1YWM0Nzc7IHBhdGg9LzsgZXhwaXJlcz1U
+        dWUsIDIyIEphbiAyMDEzIDE3OjE5OjIyIEdNVDsgaHR0cE9ubHk=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        Nzg1
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAyMiBKYW4gMjAxMyAxMzoxOToyMiBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiZGU5OWFiYjEtZjBlOS01MWQzLTMzODYtNzJiZDc3
+        YzI0NTkwIiwibmFtZSI6IlRlc3QgZ3JvdXAhIiwiY3JlYXRlZF9hdCI6IjIw
+        MTMtMDEtMjFUMTU6MzM6MTkuMzg2WiIsInVwZGF0ZWRfYXQiOiIyMDEzLTAx
+        LTIxVDE1OjMzOjE5LjM4NloiLCJhY3RpdmUiOnRydWUsImxvY2F0aW9ucyI6
+        eyJkYXRhIjpbeyJpZCI6IjFlMzZiZmJjLWQxYTgtNGNjZS04MDczLWFkZDFj
+        NmEyZjNkMCIsIm1hbmFnZXJfaWQiOm51bGwsIm5hbWUiOiJLYW1pbCBzdG9y
+        ZSIsImFkZHJlc3NfMSI6IjExOTkgVmFsZW5jaWEgU3QgKGF0IDIzcmQgU3Qp
+        IiwiYWRkcmVzc18yIjoiIiwiY2l0eSI6IlNhbiBGcmFuY2lzY28iLCJzdGF0
+        ZSI6IkNBIiwiemlwIjoiOTQxMTAiLCJjb3VudHJ5IjoiVVNBIiwidGltZV96
+        b25lIjoiQW1lcmljYS9Mb3NfQW5nZWxlcyIsInBob25lIjoiKDEyMykgNDU2
+        4oCTNzgiLCJhY3RpdmF0ZWQiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDEzLTAx
+        LTIxVDA5OjMwOjM3LjgxNFoiLCJ1cGRhdGVkX2F0IjoiMjAxMy0wMS0yMVQx
+        NTozNDoyNi45MzdaIiwiY3VycmVudF9wYXlfcGVyaW9kX2lkIjpudWxsLCJs
+        b2NhdGlvbl9ncm91cF9pZCI6ImRlOTlhYmIxLWYwZTktNTFkMy0zMzg2LTcy
+        YmQ3N2MyNDU5MCIsImN1cnJlbmN5X2Zvcm1hdCI6bnVsbCwiY3VycmVuY3lf
+        b2ZmaWNpYWxfbmFtZSI6bnVsbCwiY3VycmVuY3lfc3ltYm9sIjpudWxsfV0s
+        ImNvdW50IjoxfX0sInNjb3BlIjoiYXBpIiwic3RhdHVzIjp0cnVlLCJjb2Rl
+        Ijoib2siLCJtZXNzYWdlIjoiIn0=
+    http_version: 
+  recorded_at: Tue, 22 Jan 2013 13:19:22 GMT
+recorded_with: VCR 2.4.0
