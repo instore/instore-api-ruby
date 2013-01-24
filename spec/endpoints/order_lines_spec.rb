@@ -5,6 +5,13 @@ describe 'Instore::Api#order_lines' do
   let(:host) { 'http://own-dev3.railwaymen.org:4006' }
   let(:instore) { Instore::Api.new(access_token, :host => host) }
 
+  it 'should fetch order_lines' do
+    VCR.use_cassette('order_lines/index') do
+      response = instore.order_lines.to_a
+      response.should be_instance_of(Array)
+    end
+  end
+
   it 'should fetch order_line' do
     VCR.use_cassette('order_lines/show') do
       response = instore.order_lines.find('d9345047-1fa2-17e3-4178-5dace041ec83')

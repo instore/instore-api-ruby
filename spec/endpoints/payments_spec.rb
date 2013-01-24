@@ -5,6 +5,13 @@ describe 'Instore::Api#payments' do
   let(:host) { 'http://own-dev3.railwaymen.org:4006' }
   let(:instore) { Instore::Api.new(access_token, :host => host) }
  
+  it 'should fetch payments' do
+    VCR.use_cassette('payments/index') do
+      response = instore.payments.to_a
+      response.should be_instance_of(Array)
+    end
+  end
+
   it 'should fetch payment' do
     VCR.use_cassette('payments/show') do
       response = instore.payments.find('b26e58ca-c094-ae39-9f0d-2df3e4b92189')

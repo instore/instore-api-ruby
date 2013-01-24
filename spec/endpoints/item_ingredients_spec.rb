@@ -5,6 +5,13 @@ describe 'Instore::Api#item_ingredients' do
   let(:host) { 'http://own-dev3.railwaymen.org:4006' }
   let(:instore) { Instore::Api.new(access_token, :host => host) }
 
+  it 'should fetch item_ingredients' do
+    VCR.use_cassette('item_ingredients/index') do
+      response = instore.item_ingredients.to_a
+      response.should be_instance_of(Array)
+    end
+  end
+
   it 'should fetch item_ingredient' do
     VCR.use_cassette('item_ingredients/show') do
       response = instore.item_ingredients.find('bd2747f5-6ce5-f9be-78a7-1178ceb80cbb')

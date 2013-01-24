@@ -5,6 +5,13 @@ describe 'Instore::Api#applied_discounts' do
   let(:host) { 'http://own-dev3.railwaymen.org:4006' }
   let(:instore) { Instore::Api.new(access_token, :host => host) }
 
+  it 'should fetch applied_discounts' do
+    VCR.use_cassette('applied_discounts/index') do
+      response = instore.applied_discounts.to_a
+      response.should be_instance_of(Array)
+    end
+  end
+
   it 'should fetch applied_discount' do
     VCR.use_cassette('applied_discounts/show') do
       response = instore.applied_discounts.find('672e580e-7607-6de2-3ed1-8e0c042e1cde')

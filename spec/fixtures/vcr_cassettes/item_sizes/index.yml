@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/item_sizes?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Thu, 24 Jan 2013 14:14:59 GMT; httpOnly
+      Content-Length:
+      - '5529'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 24 Jan 2013 10:14:59 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"id":"3d7b7e8c-0916-4c39-8364-c1ac4e51e555","location_id":null,"item_id":"777b4841-7f7e-4107-8bd2-0365a88db904","name":"One
+        Size","active":false,"price":0,"position":0,"created_at":"2013-01-21T09:30:37.910Z","updated_at":"2013-01-21T09:30:53.849Z"},{"id":"52a04fa8-2efa-4e17-bb13-a3bbc45f7a0b","location_id":null,"item_id":"7eae0ec3-fa43-49ba-9aef-918657d05bb6","name":"One
+        Size","active":false,"price":3,"position":0,"created_at":"2013-01-09T08:31:32.355Z","updated_at":"2013-01-09T08:32:09.186Z"},{"id":"974afc8f-cd14-4189-8ac3-1b3d17747ebd","location_id":null,"item_id":"487e415c-8310-47df-a44b-6eb2df103d65","name":"One
+        Size","active":false,"price":3,"position":0,"created_at":"2013-01-09T08:31:32.346Z","updated_at":"2013-01-09T08:32:09.180Z"},{"id":"f74f7a29-693f-4ddd-b710-b10411fb389e","location_id":null,"item_id":"1b27884d-f350-40c7-a1ba-904315f5e345","name":"One
+        Size","active":false,"price":1.5,"position":0,"created_at":"2013-01-09T08:31:32.333Z","updated_at":"2013-01-09T08:32:09.174Z"},{"id":"8d45755b-616a-444a-9186-f495735855d3","location_id":null,"item_id":"7841c8d1-7a3a-48da-8cb2-5ed0fa06863e","name":"One
+        Size","active":false,"price":1,"position":0,"created_at":"2013-01-09T08:31:32.323Z","updated_at":"2013-01-09T08:32:09.168Z"},{"id":"baabed02-4dcf-4dff-a72b-357d51a6a084","location_id":null,"item_id":"fa997d8e-2051-4400-b104-2e06b719f19d","name":"One
+        Size","active":false,"price":1,"position":0,"created_at":"2013-01-09T08:31:32.313Z","updated_at":"2013-01-09T08:32:09.162Z"},{"id":"b99cde3b-b6bf-4570-8cd5-303f149a0820","location_id":null,"item_id":"f756d33d-60f0-45c9-b816-b609707af1a2","name":"One
+        Size","active":false,"price":1.5,"position":0,"created_at":"2013-01-09T08:31:32.303Z","updated_at":"2013-01-09T08:32:09.156Z"},{"id":"c2da7e41-7f8f-4640-915f-fe2b762065bd","location_id":null,"item_id":"64617d98-59d7-47c6-a7dd-06cd7bf21a85","name":"One
+        Size","active":false,"price":2,"position":0,"created_at":"2013-01-09T08:31:32.293Z","updated_at":"2013-01-09T08:32:09.150Z"},{"id":"6e92464d-ebee-4067-b2d0-9b03635f88af","location_id":null,"item_id":"829eb549-e0e8-4784-8d08-7c1c4d2b4796","name":"One
+        Size","active":false,"price":2,"position":0,"created_at":"2013-01-09T08:31:32.283Z","updated_at":"2013-01-09T08:32:09.144Z"},{"id":"81ad0340-f5cd-4f58-b634-a0f78df78f2a","location_id":null,"item_id":"a422bd94-6dd0-45f3-a14f-96b21721e45c","name":"One
+        Size","active":false,"price":2,"position":0,"created_at":"2013-01-09T08:31:32.274Z","updated_at":"2013-01-09T08:32:09.138Z"},{"id":"93ab47b7-4838-483e-984c-17ba0bb2f082","location_id":null,"item_id":"7533da03-e057-4576-8a1d-565df99849e1","name":"One
+        Size","active":false,"price":6.75,"position":0,"created_at":"2013-01-09T08:31:32.261Z","updated_at":"2013-01-09T08:32:09.131Z"},{"id":"b68c2e7b-2fad-449e-89ae-9e3bc37e92b1","location_id":null,"item_id":"b70a78df-e87b-44a7-b5d5-227979c0d2a3","name":"One
+        Size","active":false,"price":7.5,"position":0,"created_at":"2013-01-09T08:31:32.251Z","updated_at":"2013-01-09T08:32:09.125Z"},{"id":"ebf30d55-d580-45fa-b9e5-aee507208919","location_id":null,"item_id":"c9706ecb-754e-467f-ad56-0577b9e896d9","name":"One
+        Size","active":false,"price":5.75,"position":0,"created_at":"2013-01-09T08:31:32.240Z","updated_at":"2013-01-09T08:32:09.118Z"},{"id":"b24aa268-8968-42d4-a5e2-13f9137c48bb","location_id":null,"item_id":"87b0ebc7-7df3-4b13-9844-420068fd67f6","name":"One
+        Size","active":false,"price":4.5,"position":0,"created_at":"2013-01-09T08:31:32.230Z","updated_at":"2013-01-09T08:32:09.110Z"},{"id":"68bc6747-641d-4723-b395-a979a404fdcf","location_id":null,"item_id":"d21a3671-6ec3-4d42-ae35-8bc67e64caa6","name":"One
+        Size","active":false,"price":3.75,"position":0,"created_at":"2013-01-09T08:31:32.215Z","updated_at":"2013-01-09T08:32:09.103Z"},{"id":"022115c7-ca8f-4a38-9c55-47434dc4f49a","location_id":null,"item_id":"c0628de8-3d2b-47c6-9ff9-dbe869520e62","name":"One
+        Size","active":false,"price":9,"position":0,"created_at":"2013-01-09T08:31:32.202Z","updated_at":"2013-01-09T08:32:09.097Z"},{"id":"964ef452-8e85-49a7-8c81-a9a033d10882","location_id":null,"item_id":"a4002222-58af-404a-8f6c-790419c526aa","name":"One
+        Size","active":false,"price":8.5,"position":0,"created_at":"2013-01-09T08:31:32.191Z","updated_at":"2013-01-09T08:32:09.091Z"},{"id":"83e411ac-6cce-42a1-aab9-c8afcd4f018a","location_id":null,"item_id":"b7ec1412-f9b8-4bfc-82dd-25cbe3bffd9e","name":"One
+        Size","active":false,"price":0,"position":0,"created_at":"2013-01-09T08:30:59.213Z","updated_at":"2013-01-09T08:32:09.084Z"},{"id":"97e788f4-ade8-40de-80a9-e3c613a8bb49","location_id":null,"item_id":"d81915d7-6a08-43f3-88fe-e69bab1bb068","name":"One
+        Size","active":false,"price":0,"position":0,"created_at":"2013-01-09T08:27:05.712Z","updated_at":"2013-01-09T08:30:25.273Z"},{"id":"7f97ab92-3c22-464f-a5bf-e896b65956be","location_id":null,"item_id":"611c1be2-8a81-4783-af7a-403111745abf","name":"One
+        Size","active":true,"price":6,"position":0,"created_at":"2013-01-08T15:18:14.980Z","updated_at":"2013-01-08T15:18:14.980Z"}],"count":20,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":"http://own-dev3.railwaymen.org:4006/v1/api/item_sizes?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=2"}}'
+    http_version: 
+  recorded_at: Thu, 24 Jan 2013 10:14:59 GMT
+recorded_with: VCR 2.4.0

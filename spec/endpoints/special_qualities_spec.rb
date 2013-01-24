@@ -5,6 +5,13 @@ describe 'Instore::Api#special_qualities' do
   let(:host) { 'http://own-dev3.railwaymen.org:4006' }
   let(:instore) { Instore::Api.new(access_token, :host => host) }
 
+  it 'should fetch special_qualities' do
+    VCR.use_cassette('special_qualities/index') do
+      response = instore.special_qualities.to_a
+      response.should be_instance_of(Array)
+    end
+  end
+
   it 'should fetch special_quality' do
     VCR.use_cassette('special_qualities/show') do
       response = instore.special_qualities.find('074bfaea-392d-5d4e-e495-aef5e4997a02')
