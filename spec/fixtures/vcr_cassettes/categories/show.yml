@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/categories/17b530c0-fd28-4091-94b0-aab2417936ae?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Thu, 24 Jan 2013 14:00:34 GMT; httpOnly
+      Content-Length:
+      - '4198'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 24 Jan 2013 10:00:34 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":"17b530c0-fd28-4091-94b0-aab2417936ae","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
+        99!","active":true,"position":0,"created_at":"2013-01-21T10:42:33.602Z","updated_at":"2013-01-21T11:02:54.402Z","items":{"data":[{"id":"f105021b-330d-4f9b-bcf2-0d69a448392e","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"17b530c0-fd28-4091-94b0-aab2417936ae","name":"Item
+        1","position":0,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:08.128Z","updated_at":"2013-01-21T13:11:17.024Z","item_sizes":{"data":[{"id":"ec002c58-1aac-45cb-8e67-08e6dd89d122","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"f105021b-330d-4f9b-bcf2-0d69a448392e","name":"One
+        Size","active":true,"price":0,"position":0,"created_at":"2013-01-21T13:11:08.180Z","updated_at":"2013-01-21T13:11:08.180Z"}],"count":1},"item_ingredients":{"data":[{"id":"4954dfd6-3309-04ca-6a1d-4000165a2118","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"f105021b-330d-4f9b-bcf2-0d69a448392e","active":true,"ingredient_id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","ingredient":{"id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
+        ingredient!","active":true,"price":0,"created_at":"2013-01-21T15:06:20.743Z","updated_at":"2013-01-21T15:06:20.744Z"}}],"count":1},"special_qualities":{"data":[],"count":0}},{"id":"4ba40e34-0ec3-4a1d-b050-cfe58ccfc815","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"17b530c0-fd28-4091-94b0-aab2417936ae","name":"New
+        item","position":1,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:21.621Z","updated_at":"2013-01-21T13:11:21.621Z","item_sizes":{"data":[{"id":"35636b25-26a0-4b2d-8009-ed5d3faa4b00","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"4ba40e34-0ec3-4a1d-b050-cfe58ccfc815","name":"One
+        Size","active":true,"price":0,"position":0,"created_at":"2013-01-21T13:11:21.627Z","updated_at":"2013-01-21T13:11:21.627Z"}],"count":1},"item_ingredients":{"data":[],"count":0},"special_qualities":{"data":[],"count":0}},{"id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"17b530c0-fd28-4091-94b0-aab2417936ae","name":"Item
+        2","position":2,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:37.932Z","updated_at":"2013-01-21T13:11:44.139Z","item_sizes":{"data":[{"id":"befc7f09-33ae-6d5a-fbf9-732bc182b56b","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","name":"Test
+        item_size 99!","active":false,"price":0,"position":0,"created_at":"2013-01-22T11:24:36.473Z","updated_at":"2013-01-22T11:25:24.526Z"},{"id":"424b9981-c10f-4d0c-a867-f9ea8fec0789","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","name":"One
+        Size","active":true,"price":2,"position":0,"created_at":"2013-01-21T13:11:37.938Z","updated_at":"2013-01-22T14:00:19.103Z"}],"count":2},"item_ingredients":{"data":[{"id":"bd2747f5-6ce5-f9be-78a7-1178ceb80cbb","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","active":false,"ingredient_id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","ingredient":{"id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
+        ingredient!","active":true,"price":0,"created_at":"2013-01-21T15:06:20.743Z","updated_at":"2013-01-21T15:06:20.744Z"}}],"count":1},"special_qualities":{"data":[{"data":[{"id":"074bfaea-392d-5d4e-e495-aef5e4997a02","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","active":false,"unique_quality_id":"849e5c92-271f-48fc-ae42-38b67176b492","created_at":"2013-01-22T11:54:21.842Z","updated_at":"2013-01-22T11:56:54.662Z"}],"count":1,"unique_quality":{"id":"849e5c92-271f-48fc-ae42-38b67176b492","name":"Eggs","active":true,"created_at":"2011-03-01T10:57:34.886Z","updated_at":"2011-03-01T10:57:34.886Z"}}],"count":1}}],"count":3}},"scope":"api","status":true,"code":"ok","message":""}'
+    http_version: 
+  recorded_at: Thu, 24 Jan 2013 10:00:34 GMT
+recorded_with: VCR 2.4.0

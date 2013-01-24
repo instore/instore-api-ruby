@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://own-dev3.railwaymen.org:4006/v1/api/orders/a30b292f-1feb-002d-9306-082699d83a21/void?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Thu, 24 Jan 2013 13:13:17 GMT; httpOnly
+      Content-Length:
+      - '5866'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 24 Jan 2013 09:13:17 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":"a30b292f-1feb-002d-9306-082699d83a21","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","user_id":"24826684-90d7-41ee-ba0c-4e989b4f88a4","credit_card_transaction_id":null,"open":null,"status":null,"sub_total":0,"sales_tax":0,"total":0,"void_refund_id":null,"void_refund_time":null,"state":"void","order_no":null,"line_item_quantity":null,"different_line_item_quantity":null,"suggestions_quantity":null,"discount_amount":0,"discount_percent":0,"time_zone_stamp":null,"no_tax":false,"terminal_id":null,"bill_number":null,"total_without_gift_cards":0,"gift_cards_count":0,"net_price_pure":2,"net_price":2,"net_price_with_gift_card":2,"discount_global":0,"discount_item":0,"discount_total":0,"tax_item":0,"tax_global":0.1,"tax_total":0.1,"gross_price":2,"gross_price_with_gift_card":2,"gross_price_total":2.1,"gross_price_total_with_gift_card":2.1,"left_to_pay":1.1,"no_tax_reason":null,"takeout":null,"created_at":"2013-01-22T15:01:14.475Z","updated_at":"2013-01-24T09:13:17.539Z","order_lines":{"data":[{"id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","order_id":"a30b292f-1feb-002d-9306-082699d83a21","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","item_size_id":"424b9981-c10f-4d0c-a867-f9ea8fec0789","item_total":0,"quantity":1,"void_refund_id":null,"void_refund_time":null,"state":null,"discount_amount":0,"discount_percent":0,"tax":0,"tax_percent":5,"is_universal_tax":null,"no_tax":false,"net_price_pure":2,"net_price_single":2,"gross_price":2,"gross_price_total":2,"net_price_ingredients":0,"gross_price_ingredients":0,"discount_total":0,"discount_item":0,"discount_item_pure":0,"discount_item_ingredients":0,"discount_global":0,"discount_ingredients":0,"tax_individual":false,"tax_total":0.1,"tax_ingredients":0,"tax_item":0.1,"item_size_name":null,"item_name":null,"takeout":null,"created_at":"2013-01-22T15:06:52.432Z","updated_at":"2013-01-24T09:12:55.870Z","item_sales_tax":0,"item":{"id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"17b530c0-fd28-4091-94b0-aab2417936ae","name":"Item
+        2","position":2,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:37.932Z","updated_at":"2013-01-21T13:11:44.139Z"},"item_size":{"id":"424b9981-c10f-4d0c-a867-f9ea8fec0789","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","name":"One
+        Size","active":true,"price":2,"position":0,"created_at":"2013-01-21T13:11:37.938Z","updated_at":"2013-01-22T14:00:19.103Z"},"applied_discounts":{"data":[],"count":0},"order_line_ingredients":{"data":[{"id":"f7098582-7d61-94f9-24b5-c6535ebe5e84","order_line_id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","quantity":1,"ingredients_total":0,"ingredient_type":null,"ingredient_id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","net_price":0,"net_price_single":0,"discount_item":0,"discount_global":0,"discount_total":0,"tax_individual":false,"tax":0,"gross_price":0,"gross_price_total":0,"ingredient":{"id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
+        ingredient!","active":true,"price":0,"created_at":"2013-01-21T15:06:20.743Z","updated_at":"2013-01-21T15:06:20.744Z"}},{"id":"c7e10881-1070-0dd8-95e6-d327c58361ec","order_line_id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","quantity":1,"ingredients_total":0,"ingredient_type":null,"ingredient_id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","net_price":0,"net_price_single":0,"discount_item":0,"discount_global":0,"discount_total":0,"tax_individual":false,"tax":0,"gross_price":0,"gross_price_total":0,"ingredient":{"id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
+        ingredient!","active":true,"price":0,"created_at":"2013-01-21T15:06:20.743Z","updated_at":"2013-01-21T15:06:20.744Z"}},{"id":"4649e8b5-f667-f787-c6f9-95e2b8b7666c","order_line_id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","quantity":1,"ingredients_total":0,"ingredient_type":null,"ingredient_id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","net_price":0,"net_price_single":0,"discount_item":0,"discount_global":0,"discount_total":0,"tax_individual":false,"tax":0,"gross_price":0,"gross_price_total":0,"ingredient":{"id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","name":"Test
+        ingredient!","active":true,"price":0,"created_at":"2013-01-21T15:06:20.743Z","updated_at":"2013-01-21T15:06:20.744Z"}}],"count":3},"order_line_taxes":{"data":[{"id":"8f7e9992-7541-45c6-19f7-4827b7c87760","location_id":null,"order_line_id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_tax_id":null,"tax_rate":5,"created_at":"2013-01-24T09:12:55.830Z","updated_at":"2013-01-24T09:12:55.830Z","tax":0.1,"location_tax":{"data":null,"scope":"api","status":true,"code":"ok","message":""}}],"count":1}}],"count":1},"payments":{"data":[{"id":"df25ac33-7cf0-332f-5a04-bda19ecd972f","order_id":"a30b292f-1feb-002d-9306-082699d83a21","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":1,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-24T09:12:55.290Z","updated_at":"2013-01-24T09:12:55.300Z","tip":{"data":null,"scope":"api","status":true,"code":"ok","message":""}}],"count":1},"applied_discounts":{"data":[],"count":0},"hold_orders":{"data":[],"count":0},"tips":{"data":[],"count":0}},"scope":"api","status":true,"code":"ok","message":"Refund
+        : 1.00 cash to the customer"}'
+    http_version: 
+  recorded_at: Thu, 24 Jan 2013 09:13:17 GMT
+recorded_with: VCR 2.4.0

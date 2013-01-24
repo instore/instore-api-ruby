@@ -22,6 +22,14 @@ module Instore
       def refund(id)
         build_response self.class.post("#{path}/#{id}/refund", @options)
       end
+
+      def hold(id, params = {})
+        build_response self.class.post("#{path}/#{id}/hold_order", {body: params}.merge(@options))
+      end
+
+      def unhold(id)
+        build_response self.class.post("#{path}/#{id}/unhold_order", @options)
+      end
     end
   end
 end

@@ -1,3 +1,4 @@
 .DS_Store
 *.gem
 .rvmrc
+use_case.rb
