@@ -14,18 +14,18 @@ http_interactions:
     headers:
       Set-Cookie:
       - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
-        path=/; expires=Thu, 24 Jan 2013 14:43:41 GMT; httpOnly
+        path=/; expires=Fri, 25 Jan 2013 14:46:58 GMT; httpOnly
       Content-Length:
-      - '1587'
+      - '1626'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 24 Jan 2013 10:43:41 GMT
+      - Fri, 25 Jan 2013 10:46:58 GMT
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"id":"df25ac33-7cf0-332f-5a04-bda19ecd972f","order_id":"a30b292f-1feb-002d-9306-082699d83a21","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":1,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-24T09:12:55.290Z","updated_at":"2013-01-24T09:12:55.300Z"},{"id":"9e8dcbec-5233-12bf-22b7-55f9518d4206","order_id":"97bdeb9b-d4bf-bddb-aa5a-6368d2b9f4ea","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":5.3,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-24T09:09:24.709Z","updated_at":"2013-01-24T09:09:24.711Z"},{"id":"b26e58ca-c094-ae39-9f0d-2df3e4b92189","order_id":"97bdeb9b-d4bf-bddb-aa5a-6368d2b9f4ea","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":1,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-22T14:01:25.225Z","updated_at":"2013-01-22T14:01:25.226Z"}],"count":3,"scope":"api","status":true,"code":"ok","message":""}'
+      string: ! '{"data":[{"id":"df25ac33-7cf0-332f-5a04-bda19ecd972f","order_id":"a30b292f-1feb-002d-9306-082699d83a21","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":1,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-24T09:12:55.290Z","updated_at":"2013-01-24T09:12:55.300Z"},{"id":"9e8dcbec-5233-12bf-22b7-55f9518d4206","order_id":"97bdeb9b-d4bf-bddb-aa5a-6368d2b9f4ea","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":5.3,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-24T09:09:24.709Z","updated_at":"2013-01-24T09:09:24.711Z"},{"id":"b26e58ca-c094-ae39-9f0d-2df3e4b92189","order_id":"97bdeb9b-d4bf-bddb-aa5a-6368d2b9f4ea","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","tip_id":null,"order_line_id":null,"payment_type":"cash","amount":1,"bill":0,"change":0,"transaction_identifier":null,"status":null,"signature_image_data":null,"gift_card_new_balanc":0,"card_type":null,"card_masked_pan":null,"subtotal_amount":0,"tax_amount":0,"tip_amount":0,"created_at":"2013-01-22T14:01:25.225Z","updated_at":"2013-01-22T14:01:25.226Z"}],"count":3,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":null}}'
     http_version: 
-  recorded_at: Thu, 24 Jan 2013 10:43:41 GMT
+  recorded_at: Fri, 25 Jan 2013 10:46:58 GMT
 recorded_with: VCR 2.4.0

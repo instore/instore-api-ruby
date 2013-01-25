@@ -10,4 +10,18 @@ describe 'Instore::Api#unique_qualities' do
       response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
+
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('unique_qualities/index_with_limit') do
+      response = subject.unique_qualities(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('unique_qualities/index_with_limit') do
+      response = subject.unique_qualities(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
 end

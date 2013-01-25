@@ -10,4 +10,18 @@ describe 'Instore::Api#locations' do
       response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
+
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('locations/index_with_limit') do
+      response = subject.locations(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('locations/index_with_limit') do
+      response = subject.locations(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
 end

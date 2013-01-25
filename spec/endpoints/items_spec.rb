@@ -11,6 +11,20 @@ describe 'Instore::Api#items' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('items/index_with_limit') do
+      response = subject.items(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('items/index_with_limit') do
+      response = subject.items(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch item' do
     VCR.use_cassette('items/show') do
       response = subject.items.find('a259f474-1dba-e53f-d88f-5925cdeb8085')

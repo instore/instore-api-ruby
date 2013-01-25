@@ -11,6 +11,20 @@ describe 'Instore::Api#payments' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('payments/index_with_limit') do
+      response = subject.payments(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('payments/index_with_limit') do
+      response = subject.payments(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch payment' do
     VCR.use_cassette('payments/show') do
       response = subject.payments.find('b26e58ca-c094-ae39-9f0d-2df3e4b92189')

@@ -11,6 +11,20 @@ describe 'Instore::Api#categories' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('categories/index_with_limit') do
+      response = subject.categories(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('categories/index_with_limit') do
+      response = subject.categories(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch category' do
     VCR.use_cassette('categories/show') do
       response = subject.categories.find('17b530c0-fd28-4091-94b0-aab2417936ae')

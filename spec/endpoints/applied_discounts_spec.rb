@@ -11,6 +11,20 @@ describe 'Instore::Api#applied_discounts' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('applied_discounts/index_with_limit') do
+      response = subject.applied_discounts(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('applied_discounts/index_with_limit') do
+      response = subject.applied_discounts(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch applied_discount' do
     VCR.use_cassette('applied_discounts/show') do
       response = subject.applied_discounts.find('672e580e-7607-6de2-3ed1-8e0c042e1cde')

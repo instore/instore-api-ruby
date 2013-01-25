@@ -14,13 +14,13 @@ http_interactions:
     headers:
       Set-Cookie:
       - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
-        path=/; expires=Thu, 24 Jan 2013 14:35:05 GMT; httpOnly
+        path=/; expires=Fri, 25 Jan 2013 14:49:08 GMT; httpOnly
       Content-Length:
-      - '1389'
+      - '1428'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 24 Jan 2013 10:35:05 GMT
+      - Fri, 25 Jan 2013 10:49:08 GMT
       Connection:
       - keep-alive
     body:
@@ -29,7 +29,7 @@ http_interactions:
         1","position":0,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:08.128Z","updated_at":"2013-01-21T13:11:17.024Z"},{"id":"4ba40e34-0ec3-4a1d-b050-cfe58ccfc815","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"17b530c0-fd28-4091-94b0-aab2417936ae","name":"New
         item","position":1,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:21.621Z","updated_at":"2013-01-21T13:11:21.621Z"},{"id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"17b530c0-fd28-4091-94b0-aab2417936ae","name":"Item
         2","position":2,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-21T13:11:37.932Z","updated_at":"2013-01-21T13:11:44.139Z"},{"id":"a259f474-1dba-e53f-d88f-5925cdeb8085","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_category_id":"a1e5103e-7f8a-4e5c-8075-507f485e06c1","name":"Test
-        item 99!","position":null,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-22T09:52:24.870Z","updated_at":"2013-01-22T09:53:11.578Z"}],"count":4,"scope":"api","status":true,"code":"ok","message":""}'
+        item 99!","position":null,"description":null,"override_sales_tax":false,"sales_tax":0,"created_at":"2013-01-22T09:52:24.870Z","updated_at":"2013-01-22T09:53:11.578Z"}],"count":4,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":null}}'
     http_version: 
-  recorded_at: Thu, 24 Jan 2013 10:35:05 GMT
+  recorded_at: Fri, 25 Jan 2013 10:49:08 GMT
 recorded_with: VCR 2.4.0

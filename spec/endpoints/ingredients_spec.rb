@@ -11,6 +11,20 @@ describe 'Instore::Api#ingredients' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('ingredients/index_with_limit') do
+      response = subject.ingredients(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('ingredients/index_with_limit') do
+      response = subject.ingredients(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should create ingredient' do
     VCR.use_cassette('ingredients/create') do
       response = subject.ingredients.create(location_id: '1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0', name: 'Test ingredient 4!')

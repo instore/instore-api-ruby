@@ -1,0 +1,31 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instoredoes.com/v1/api/order_line_ingredients?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Fri, 25 Jan 2013 15:21:27 GMT; httpOnly
+      Content-Length:
+      - '958'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Jan 2013 11:21:27 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"id":"f7098582-7d61-94f9-24b5-c6535ebe5e84","order_line_id":"d9345047-1fa2-17e3-4178-5dace041ec83","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","quantity":1,"ingredients_total":0,"ingredient_type":null,"ingredient_id":"895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0","net_price":0,"net_price_single":0,"discount_item":0,"discount_global":0,"discount_total":0,"tax_individual":false,"tax":0,"gross_price":0,"gross_price_total":0}],"count":1,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":"https://api.instoredoes.com/v1/api/order_line_ingredients?limit=1&access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg%3DpERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569&page=2"}}'
+    http_version: 
+  recorded_at: Fri, 25 Jan 2013 11:21:27 GMT
+recorded_with: VCR 2.4.0

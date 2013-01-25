@@ -11,6 +11,20 @@ describe 'Instore::Api#taxes' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('taxes/index_with_limit') do
+      response = subject.taxes(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('taxes/index_with_limit') do
+      response = subject.taxes(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch tax' do
     VCR.use_cassette('taxes/show') do
       response = subject.taxes.find('258d9dcc-30b4-652a-56a5-e24b918308b2')

@@ -14,18 +14,18 @@ http_interactions:
     headers:
       Set-Cookie:
       - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
-        path=/; expires=Thu, 24 Jan 2013 14:45:28 GMT; httpOnly
+        path=/; expires=Fri, 25 Jan 2013 14:48:50 GMT; httpOnly
       Content-Length:
-      - '375'
+      - '414'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 24 Jan 2013 10:45:28 GMT
+      - Fri, 25 Jan 2013 10:48:50 GMT
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"id":"074bfaea-392d-5d4e-e495-aef5e4997a02","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","active":false,"unique_quality_id":"849e5c92-271f-48fc-ae42-38b67176b492","created_at":"2013-01-22T11:54:21.842Z","updated_at":"2013-01-22T11:56:54.662Z"}],"count":1,"scope":"api","status":true,"code":"ok","message":""}'
+      string: ! '{"data":[{"id":"074bfaea-392d-5d4e-e495-aef5e4997a02","location_id":"1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0","item_id":"57deb0d5-da5b-40c7-a5ed-3bfabc93f380","active":false,"unique_quality_id":"849e5c92-271f-48fc-ae42-38b67176b492","created_at":"2013-01-22T11:54:21.842Z","updated_at":"2013-01-22T11:56:54.662Z"}],"count":1,"scope":"api","status":true,"code":"ok","message":"","paging":{"previous":null,"next":null}}'
     http_version: 
-  recorded_at: Thu, 24 Jan 2013 10:45:28 GMT
+  recorded_at: Fri, 25 Jan 2013 10:48:50 GMT
 recorded_with: VCR 2.4.0

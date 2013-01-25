@@ -11,6 +11,20 @@ describe 'Instore::Api#item_sizes' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('item_sizes/index_with_limit') do
+      response = subject.item_sizes(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('item_sizes/index_with_limit') do
+      response = subject.item_sizes(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch item_size' do
     VCR.use_cassette('item_sizes/show') do
       response = subject.item_sizes.find('befc7f09-33ae-6d5a-fbf9-732bc182b56b')

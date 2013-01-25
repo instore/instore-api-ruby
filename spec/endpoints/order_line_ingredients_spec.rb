@@ -11,6 +11,20 @@ describe 'Instore::Api#order_line_ingredients' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('order_line_ingredients/index_with_limit') do
+      response = subject.order_line_ingredients(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('order_line_ingredients/index_with_limit') do
+      response = subject.order_line_ingredients(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch order_line_ingredient' do
     VCR.use_cassette('order_line_ingredients/show') do
       response = subject.order_line_ingredients.find('c7e10881-1070-0dd8-95e6-d327c58361ec')

@@ -25,68 +25,68 @@ module Instore
       @host = options[:host] || BASE_URL
     end
 
-    def categories
-      EndPoints::Categories.new(@host, @access_token)
+    def categories(params = {})
+      EndPoints::Categories.new(@host, @access_token, params)
     end
 
-    def items
-      EndPoints::Items.new(@host, @access_token)
+    def items(params = {})
+      EndPoints::Items.new(@host, @access_token, params)
     end
 
-    def item_sizes
-      EndPoints::ItemSizes.new(@host, @access_token)
+    def item_sizes(params = {})
+      EndPoints::ItemSizes.new(@host, @access_token, params)
     end
 
-    def special_qualities
-      EndPoints::SpecialQualities.new(@host, @access_token)
+    def special_qualities(params = {})
+      EndPoints::SpecialQualities.new(@host, @access_token, params)
     end
 
-    def item_ingredients
-      EndPoints::ItemIngredients.new(@host, @access_token)
+    def item_ingredients(params = {})
+      EndPoints::ItemIngredients.new(@host, @access_token, params)
     end
 
-    def ingredients
-      EndPoints::Ingredients.new(@host, @access_token)
+    def ingredients(params = {})
+      EndPoints::Ingredients.new(@host, @access_token, params)
     end
 
-    def discounts
-      EndPoints::Discounts.new(@host, @access_token)
+    def discounts(params = {})
+      EndPoints::Discounts.new(@host, @access_token, params)
     end
 
-    def locations
-      EndPoints::Locations.new(@host, @access_token)
+    def locations(params = {})
+      EndPoints::Locations.new(@host, @access_token, params)
     end
 
-    def location_groups
-      EndPoints::LocationGroups.new(@host, @access_token)
+    def location_groups(params = {})
+      EndPoints::LocationGroups.new(@host, @access_token, params)
     end
 
-    def taxes
-      EndPoints::Taxes.new(@host, @access_token)
+    def taxes(params = {})
+      EndPoints::Taxes.new(@host, @access_token, params)
     end
 
-    def unique_qualities
-      EndPoints::UniqueQualities.new(@host, @access_token)
+    def unique_qualities(params = {})
+      EndPoints::UniqueQualities.new(@host, @access_token, params)
     end
 
-    def orders
-      EndPoints::Orders.new(@host, @access_token)
+    def orders(params = {})
+      EndPoints::Orders.new(@host, @access_token, params)
     end
 
-    def order_lines
-      EndPoints::OrderLines.new(@host, @access_token)
+    def order_lines(params = {})
+      EndPoints::OrderLines.new(@host, @access_token, params)
     end
 
-    def order_line_ingredients
-      EndPoints::OrderLineIngredients.new(@host, @access_token)
+    def order_line_ingredients(params = {})
+      EndPoints::OrderLineIngredients.new(@host, @access_token, params)
     end
 
-    def applied_discounts
-      EndPoints::AppliedDiscounts.new(@host, @access_token)
+    def applied_discounts(params = {})
+      EndPoints::AppliedDiscounts.new(@host, @access_token, params)
     end
 
-    def payments
-      EndPoints::Payments.new(@host, @access_token)
+    def payments(params = {})
+      EndPoints::Payments.new(@host, @access_token, params)
     end
   end
 end

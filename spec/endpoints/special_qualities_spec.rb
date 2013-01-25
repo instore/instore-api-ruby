@@ -11,6 +11,20 @@ describe 'Instore::Api#special_qualities' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('special_qualities/index_with_limit') do
+      response = subject.special_qualities(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('special_qualities/index_with_limit') do
+      response = subject.special_qualities(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch special_quality' do
     VCR.use_cassette('special_qualities/show') do
       response = subject.special_qualities.find('074bfaea-392d-5d4e-e495-aef5e4997a02')

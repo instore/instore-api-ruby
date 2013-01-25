@@ -11,6 +11,20 @@ describe 'Instore::Api#location_groups' do
     end
   end
 
+  it 'should respond to previous_page?' do
+    VCR.use_cassette('location_groups/index_with_limit') do
+      response = subject.location_groups(limit: 1).to_a
+      response.previous_page?.should be_false
+    end
+  end
+
+  it 'should respond to next_page?' do
+    VCR.use_cassette('location_groups/index_with_limit') do
+      response = subject.location_groups(limit: 1).to_a
+      response.next_page?.should be_true
+    end
+  end
+
   it 'should fetch location_group' do
     VCR.use_cassette('location_groups/show') do
       response = subject.location_groups.find('de99abb1-f0e9-51d3-3386-72bd77c24590')

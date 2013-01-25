@@ -41,21 +41,17 @@ module Instore
       include ::HTTParty
       format :json
 
-      def initialize(host, access_token, options = {})
+      def initialize(host, access_token, params = {})
         @host = host
         @access_token = access_token
-        @options = options
-        @prepend_path = @options[:prepend_path]
-        @options[:query] ||= {} 
+        @options = {}
+        @options[:query] = {}
+        @options[:query].merge!(params)
         @options[:query][:access_token] = access_token
       end
 
       def path
-        if @prepend_path
-          "#{@host}/v1/api/#{@prepend_path}/#{resource}"
-        else
-          "#{@host}/v1/api/#{resource}"
-        end
+        "#{@host}/v1/api/#{resource}"
       end
 
       def create_resource(params = {})
