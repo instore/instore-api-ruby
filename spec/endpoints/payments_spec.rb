@@ -7,7 +7,7 @@ describe 'Instore::Api#payments' do
   it 'should fetch payments' do
     VCR.use_cassette('payments/index') do
       response = subject.payments.to_a
-      response.should be_instance_of(Array)
+      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
 

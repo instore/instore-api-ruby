@@ -56,7 +56,7 @@ Full list of methods
     instore.special_qualities.find(id)
     instore.special_qualities.create(params)
     instore.special_qualities.destroy(id)
-    instore.unique_qualities.destroy(id)
+    instore.unique_qualities.to_a
     instore.locations.to_a
     instore.location_groups.to_a
     instore.location_groups.find(id)

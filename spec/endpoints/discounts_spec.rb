@@ -7,7 +7,7 @@ describe 'Instore::Api#discounts' do
   it 'should fetch discounts' do
     VCR.use_cassette('discounts/index') do
       response = subject.discounts.to_a
-      response.should be_instance_of(Array)
+      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
 

@@ -7,7 +7,7 @@ describe 'Instore::Api#special_qualities' do
   it 'should fetch special_qualities' do
     VCR.use_cassette('special_qualities/index') do
       response = subject.special_qualities.to_a
-      response.should be_instance_of(Array)
+      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
 

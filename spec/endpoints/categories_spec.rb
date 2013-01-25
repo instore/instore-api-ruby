@@ -7,7 +7,7 @@ describe 'Instore::Api#categories' do
   it 'should fetch categories' do
     VCR.use_cassette('categories/index') do
       response = subject.categories.to_a
-      response.should be_instance_of(Array)
+      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
 
@@ -36,13 +36,6 @@ describe 'Instore::Api#categories' do
     VCR.use_cassette('categories/destroy') do
       response = subject.categories.destroy('6511f34c-beea-0488-170c-82038ee1306f')
       response.status.should be_true
-    end
-  end
-
-  it 'should fetch items for first category' do
-    VCR.use_cassette('categories/items') do
-      items = subject.categories.first.items.to_a
-      items.should have(3).items
     end
   end
 end

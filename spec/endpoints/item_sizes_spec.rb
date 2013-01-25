@@ -7,7 +7,7 @@ describe 'Instore::Api#item_sizes' do
   it 'should fetch item_sizes' do
     VCR.use_cassette('item_sizes/index') do
       response = subject.item_sizes.to_a
-      response.should be_instance_of(Array)
+      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
 

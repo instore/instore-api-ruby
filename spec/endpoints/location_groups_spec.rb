@@ -7,7 +7,7 @@ describe 'Instore::Api#location_groups' do
   it 'should fetch location_groups' do
     VCR.use_cassette('location_groups/index') do
       response = subject.location_groups.to_a
-      response.should be_instance_of(Array)
+      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
     end
   end
 
