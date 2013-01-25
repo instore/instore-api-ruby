@@ -11,6 +11,13 @@ describe 'Instore::Api#unique_qualities' do
     end
   end
 
+  it 'should fetch unique_quality' do
+    VCR.use_cassette('unique_qualities/show') do
+      response = subject.unique_qualities.find('849e5c92-271f-48fc-ae42-38b67176b492')
+      response.status.should be_true
+    end
+  end
+
   it 'should respond to previous_page?' do
     VCR.use_cassette('unique_qualities/index_with_limit') do
       response = subject.unique_qualities(limit: 1).to_a

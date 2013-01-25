@@ -11,6 +11,13 @@ describe 'Instore::Api#ingredients' do
     end
   end
 
+  it 'should fetch ingredient' do
+    VCR.use_cassette('ingredients/show') do
+      response = subject.ingredients.find('895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0')
+      response.status.should be_true
+    end
+  end
+
   it 'should respond to previous_page?' do
     VCR.use_cassette('ingredients/index_with_limit') do
       response = subject.ingredients(limit: 1).to_a

@@ -11,6 +11,13 @@ describe 'Instore::Api#locations' do
     end
   end
 
+  it 'should fetch location' do
+    VCR.use_cassette('locations/show') do
+      response = subject.locations.find('1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0')
+      response.status.should be_true
+    end
+  end
+
   it 'should respond to previous_page?' do
     VCR.use_cassette('locations/index_with_limit') do
       response = subject.locations(limit: 1).to_a

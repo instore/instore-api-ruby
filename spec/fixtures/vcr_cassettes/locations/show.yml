@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instoredoes.com/v1/api/locations/1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0?access_token=9JkAmIetQcJg_ZJ-w-GEU9EphBg=pERJPFtga8b1ce5ca5a12dec17ef1fe9c2add4aa61ba85b5ea6f40beeebef19e4873e77c67d386830f31aed43c3d87b41110d6cc39f9be179e22ff4ec198b5516caa923256c12b96e4b7b5806e810c51a9061b0974465429844a21501c067030cb5dee2cdb653ebd918f0598f0112323bdf07d033e8a12e694349b2998753e330edec3dbbbc1c567e0bba2160b65a3ae47632569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Fri, 25 Jan 2013 15:36:55 GMT; httpOnly
+      Content-Length:
+      - '591'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Jan 2013 11:36:55 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiMWUzNmJmYmMtZDFhOC00Y2NlLTgwNzMtYWRkMWM2
+        YTJmM2QwIiwibWFuYWdlcl9pZCI6bnVsbCwibmFtZSI6IkthbWlsIHN0b3Jl
+        IiwiYWRkcmVzc18xIjoiMTE5OSBWYWxlbmNpYSBTdCAoYXQgMjNyZCBTdCki
+        LCJhZGRyZXNzXzIiOiIiLCJjaXR5IjoiU2FuIEZyYW5jaXNjbyIsInN0YXRl
+        IjoiQ0EiLCJ6aXAiOiI5NDExMCIsImNvdW50cnkiOiJVU0EiLCJ0aW1lX3pv
+        bmUiOiJBbWVyaWNhL0xvc19BbmdlbGVzIiwicGhvbmUiOiIoMTIzKSA0NTbi
+        gJM3OCIsImFjdGl2YXRlZCI6dHJ1ZSwiY3JlYXRlZF9hdCI6IjIwMTMtMDEt
+        MjFUMDk6MzA6MzcuODE0WiIsInVwZGF0ZWRfYXQiOiIyMDEzLTAxLTIxVDE1
+        OjM0OjI2LjkzN1oiLCJjdXJyZW50X3BheV9wZXJpb2RfaWQiOm51bGwsImxv
+        Y2F0aW9uX2dyb3VwX2lkIjoiZGU5OWFiYjEtZjBlOS01MWQzLTMzODYtNzJi
+        ZDc3YzI0NTkwIiwiY3VycmVuY3lfZm9ybWF0IjpudWxsLCJjdXJyZW5jeV9v
+        ZmZpY2lhbF9uYW1lIjpudWxsLCJjdXJyZW5jeV9zeW1ib2wiOm51bGx9LCJz
+        Y29wZSI6ImFwaSIsInN0YXR1cyI6dHJ1ZSwiY29kZSI6Im9rIiwibWVzc2Fn
+        ZSI6IiJ9
+    http_version: 
+  recorded_at: Fri, 25 Jan 2013 11:36:55 GMT
+recorded_with: VCR 2.4.0
