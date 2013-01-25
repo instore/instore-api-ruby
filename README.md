@@ -26,6 +26,25 @@ Getting started
 
 Further information
 
+Single object responds to data, status, code and message methods.
+
+    response = instore.categories.find('17b530c0-fd28-4091-94b0-aab2417936ae')
+    response.status # => true
+    response.scope # => "api"
+    response.code # => "ok"
+    response.message # => ""
+    response.data # => {...}
+
+Each endpoint support limit and page options for paginating API results
+
+    instore.categories(page: 2).to_a
+    instore.categories(page: 2, limit: 10).to_a
+
+Additionally response arrays responds to methods : previous_page? and next_page?
+
+    instore.categories.to_a.previous_page?
+    instore.categories(page: 10).to_a.next_page?
+
 Full list of methods
        
     instore.categories.to_a
@@ -57,7 +76,9 @@ Full list of methods
     instore.special_qualities.create(params)
     instore.special_qualities.destroy(id)
     instore.unique_qualities.to_a
+    instore.unique_qualities.find(id)
     instore.locations.to_a
+    instore.locations.find(id)
     instore.location_groups.to_a
     instore.location_groups.find(id)
     instore.taxes.to_a
