@@ -3,7 +3,7 @@ Instore
 
 Client ruby wrapper for the Instore API
 
-Getting started
+## Getting started
 
 1. Initialize Instore::Client class which wraps OAuth2 client and pass your client\_id and client\_secret values.
 
@@ -24,7 +24,7 @@ Getting started
         instore = Instore::Api.new(access_token)
 
 
-Further information
+## Further information
 
 Response object maps API fields with indifferent acccess :
 
@@ -53,7 +53,7 @@ When creating or updating resources Instore API can return validation errors. In
     response.status # => false
     response.errors # => {...}
 
-Full list of methods
+## Full list of methods
        
     instore.categories.fetch(params = {})
     instore.categories.find(id)
@@ -123,6 +123,6 @@ Full list of methods
     instore.payments.find(id)
     instore.payments.create(params)
 
-Documentation
+## Documentation
 
 You can view the full Instore api documentation at <https://instoredoes.com/developer/documentation/api>
