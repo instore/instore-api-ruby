@@ -32,17 +32,33 @@ module Instore
       end
 
       def find(id)
-        build_response self.class.get("#{path}/#{id}", @options)
+        response = self.class.get("#{path}/#{id}", @options)
+        build_response(response)
       end
 
       def fetch(params = {})
         options = @options
         options[:query].merge!(params)
-        
+
         response = self.class.get(path, options)
+
+        if response["paging"] && response["paging"]["previous"]
+          previous_page = !!response["paging"]["previous"]
+        else
+          previous_page = false
+        end
+
+        if response["paging"] && response["paging"]["next"]
+          next_page = !!response["paging"]["next"]
+        else
+          next_page = false
+        end
+
+        response["data"] ||= []
+
         build_response_collection(response, 
-          previous_page?: !!response["paging"]["previous"],
-          next_page?: !!response["paging"]["next"])
+          previous_page?: previous_page,
+          next_page?: next_page)
       end
 
       def to_a
