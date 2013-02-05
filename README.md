@@ -47,6 +47,12 @@ Additionally collections responds to methods : previous_page? and next_page?
     instore.categories.fetch.previous_page?
     instore.categories.fetch(page: 10).next_page?
 
+When creating or updating resources Instore API can return validation errors. In that case response will have status equal false along with the errors field :
+
+    response = instore.categories.create(name: '')
+    response.status # => false
+    response.errors # => {...}
+
 Full list of methods
        
     instore.categories.fetch(params = {})
