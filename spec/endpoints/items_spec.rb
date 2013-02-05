@@ -7,7 +7,7 @@ describe 'Instore::Api#items' do
   it 'should fetch items' do
     VCR.use_cassette('items/index') do
       response = subject.items.to_a
-      response.should be_instance_of(Instore::EndPoints::CollectionResponse)
+      response.should be_instance_of(Hashie::Mash)
     end
   end
 

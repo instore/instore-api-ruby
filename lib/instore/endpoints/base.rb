@@ -1,42 +1,8 @@
+require 'hashie'
 require 'httparty'
 
 module Instore
   module EndPoints
-    class CollectionResponse
-      include Enumerable
-
-      def initialize(array, options = {})
-        @array = array
-        @previous_page = options[:previous_page]
-        @next_page = options[:next_page]
-      end
-
-      def previous_page?
-        !!@previous_page
-      end
-
-      def next_page?
-        !!@next_page
-      end
-
-      def each
-        @array.each { |e| yield e }
-      end
-    end
-
-    class SingleResponse
-      def initialize(attributes_hash)
-        attributes_hash.each do |name, value| 
-          instance_variable_set("@#{name}", value)
-          unless respond_to? name
-            self.class.instance_eval do
-              attr_reader name
-            end
-          end
-        end
-      end
-    end
-
     class Base
       include ::HTTParty
       format :json
@@ -72,9 +38,9 @@ module Instore
 
       def fetch
         response = self.class.get(path, @options)
-        build_response_collection(response["data"],
-          previous_page: response["paging"]["previous"], 
-          next_page: response["paging"]["next"])
+        build_response_collection(response, 
+          previous_page?: !!response["paging"]["previous"],
+          next_page?: !!response["paging"]["next"])
       end
 
       def to_a
@@ -84,11 +50,11 @@ module Instore
       private
 
       def build_response(hash)
-        SingleResponse.new(hash)
+        Hashie::Mash.new(hash)
       end
 
-      def build_response_collection(array, options)
-        CollectionResponse.new(array, options)
+      def build_response_collection(hash, options)
+        Hashie::Mash.new(hash.merge(options))
       end
     end
   end
