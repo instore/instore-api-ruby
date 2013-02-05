@@ -13,14 +13,14 @@ describe 'Instore::Api#special_qualities' do
 
   it 'should respond to previous_page?' do
     VCR.use_cassette('special_qualities/index_with_limit') do
-      response = subject.special_qualities(limit: 1).to_a
+      response = subject.special_qualities.fetch(limit: 1)
       response.previous_page?.should be_false
     end
   end
 
   it 'should respond to next_page?' do
     VCR.use_cassette('special_qualities/index_with_limit') do
-      response = subject.special_qualities(limit: 1).to_a
+      response = subject.special_qualities.fetch(limit: 1)
       response.next_page?.should be_true
     end
   end

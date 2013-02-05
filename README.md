@@ -26,10 +26,12 @@ Getting started
 
 Further information
 
-Single object responds to data, status, code and message methods.
+Response object maps API fields with indifferent acccess :
 
     response = instore.categories.find('17b530c0-fd28-4091-94b0-aab2417936ae')
     response.status # => true
+    response['status'] # => true
+    response[:status] # => true
     response.scope # => "api"
     response.code # => "ok"
     response.message # => ""
@@ -37,61 +39,61 @@ Single object responds to data, status, code and message methods.
 
 Each endpoint support limit and page options for paginating API results
 
-    instore.categories(page: 2).to_a
-    instore.categories(page: 2, limit: 10).to_a
+    instore.categories.fetch(page: 2)
+    instore.categories.fetch(page: 2, limit: 10)
 
-Additionally response arrays responds to methods : previous_page? and next_page?
+Additionally collections responds to methods : previous_page? and next_page?
 
-    instore.categories.to_a.previous_page?
-    instore.categories(page: 10).to_a.next_page?
+    instore.categories.fetch.previous_page?
+    instore.categories.fetch(page: 10).next_page?
 
 Full list of methods
        
-    instore.categories.to_a
+    instore.categories.fetch(params = {})
     instore.categories.find(id)
     instore.categories.create(params)
     instore.categories.update(id, params)
     instore.categories.destroy(id)
-    instore.items.to_a
+    instore.items.fetch(params = {})
     instore.items.find(id)
     instore.items.create(params)
     instore.items.update(id, params)
     instore.items.destroy(id)
-    instore.item_sizes.to_a
+    instore.item_sizes.fetch(params = {})
     instore.item_sizes.find(id)
     instore.item_sizes.create(params)
     instore.item_sizes.update(id, params)
     instore.item_sizes.destroy(id)
-    instore.ingredients.to_a
+    instore.ingredients.fetch(params = {})
     instore.ingredients.find(id)
     instore.ingredients.create(params)
     instore.ingredients.update(id, params)
     instore.ingredients.destroy(id)
-    instore.item_ingredients.to_a
+    instore.item_ingredients.fetch(params = {})
     instore.item_ingredients.find(id)
     instore.item_ingredients.create(params)
     instore.item_ingredients.destroy(id)
-    instore.special_qualities.to_a
+    instore.special_qualities.fetch(params = {})
     instore.special_qualities.find(id)
     instore.special_qualities.create(params)
     instore.special_qualities.destroy(id)
-    instore.unique_qualities.to_a
+    instore.unique_qualities.fetch(params = {})
     instore.unique_qualities.find(id)
-    instore.locations.to_a
+    instore.locations.fetch(params = {})
     instore.locations.find(id)
-    instore.location_groups.to_a
+    instore.location_groups.fetch(params = {})
     instore.location_groups.find(id)
-    instore.taxes.to_a
+    instore.taxes.fetch(params = {})
     instore.taxes.find(id)
     instore.taxes.create(params)
     instore.taxes.update(id, params)
     instore.taxes.destroy(id)
-    instore.discounts.to_a
+    instore.discounts.fetch(params = {})
     instore.discounts.find(id)
     instore.discounts.create(params)
     instore.discounts.update(id, params)
     instore.discounts.destroy(id)
-    instore.orders.to_a
+    instore.orders.fetch(params = {})
     instore.orders.find(id)
     instore.orders.create(params)
     instore.orders.update(id, params)
@@ -99,19 +101,19 @@ Full list of methods
     instore.orders.refund(id)
     instore.orders.hold(id, params)
     instore.orders.unhold(id)
-    instore.order_lines.to_a
+    instore.order_lines.fetch(params = {})
     instore.order_lines.find(id)
     instore.order_lines.create(params)
     instore.order_lines.destroy(id)
-    instore.applied_discounts.to_a
+    instore.applied_discounts.fetch(params = {})
     instore.applied_discounts.find(id)
     instore.applied_discounts.create(params)
     instore.applied_discounts.destroy(id)
-    instore.order_line_ingredients.to_a
+    instore.order_line_ingredients.fetch(params = {})
     instore.order_line_ingredients.find(id)
     instore.order_line_ingredients.create(params)
     instore.order_line_ingredients.destroy(id)
-    instore.payments.to_a
+    instore.payments.fetch(params = {})
     instore.payments.find(id)
     instore.payments.create(params)
 

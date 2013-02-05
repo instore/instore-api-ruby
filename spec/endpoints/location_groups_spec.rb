@@ -13,14 +13,14 @@ describe 'Instore::Api#location_groups' do
 
   it 'should respond to previous_page?' do
     VCR.use_cassette('location_groups/index_with_limit') do
-      response = subject.location_groups(limit: 1).to_a
+      response = subject.location_groups.fetch(limit: 1)
       response.previous_page?.should be_false
     end
   end
 
   it 'should respond to next_page?' do
     VCR.use_cassette('location_groups/index_with_limit') do
-      response = subject.location_groups(limit: 1).to_a
+      response = subject.location_groups.fetch(limit: 1)
       response.next_page?.should be_true
     end
   end

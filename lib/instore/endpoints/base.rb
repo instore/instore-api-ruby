@@ -7,12 +7,11 @@ module Instore
       include ::HTTParty
       format :json
 
-      def initialize(host, access_token, params = {})
+      def initialize(host, access_token)
         @host = host
         @access_token = access_token
         @options = {}
         @options[:query] = {}
-        @options[:query].merge!(params)
         @options[:query][:access_token] = access_token
       end
 
@@ -36,8 +35,11 @@ module Instore
         build_response self.class.get("#{path}/#{id}", @options)
       end
 
-      def fetch
-        response = self.class.get(path, @options)
+      def fetch(params = {})
+        options = @options
+        options[:query].merge!(params)
+        
+        response = self.class.get(path, options)
         build_response_collection(response, 
           previous_page?: !!response["paging"]["previous"],
           next_page?: !!response["paging"]["next"])

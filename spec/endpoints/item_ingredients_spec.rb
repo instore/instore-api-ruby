@@ -13,14 +13,14 @@ describe 'Instore::Api#item_ingredients' do
 
   it 'should respond to previous_page?' do
     VCR.use_cassette('item_ingredients/index_with_limit') do
-      response = subject.item_ingredients(limit: 1).to_a
+      response = subject.item_ingredients.fetch(limit: 1)
       response.previous_page?.should be_false
     end
   end
 
   it 'should respond to next_page?' do
     VCR.use_cassette('item_ingredients/index_with_limit') do
-      response = subject.item_ingredients(limit: 1).to_a
+      response = subject.item_ingredients.fetch(limit: 1)
       response.next_page?.should be_true
     end
   end

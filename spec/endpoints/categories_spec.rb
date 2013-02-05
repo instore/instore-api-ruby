@@ -13,14 +13,14 @@ describe 'Instore::Api#categories' do
 
   it 'should respond to previous_page?' do
     VCR.use_cassette('categories/index_with_limit') do
-      response = subject.categories(limit: 1).to_a
+      response = subject.categories.fetch(limit: 1)
       response.previous_page?.should be_false
     end
   end
 
   it 'should respond to next_page?' do
     VCR.use_cassette('categories/index_with_limit') do
-      response = subject.categories(limit: 1).to_a
+      response = subject.categories.fetch(limit: 1)
       response.next_page?.should be_true
     end
   end
