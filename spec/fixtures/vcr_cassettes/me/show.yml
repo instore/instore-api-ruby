@@ -1,0 +1,33 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instoredoes.com/v1/api/me?access_token=C5UsOlYriXWFq_o2saWcVaBDFt4=slyco8pu4d175553cc17c88fdd26223ca88e41651689e417b1960460435aa998279497bce78c5bdc08250ca0af71705ac44dacd7d7acf49ec94e97f4acde9b1805f3d09e94db7ee09cf264828a44a8def0d7fda2d47cae2f5130d1bc0822839f1ba7b098348b9ca551ffc4cd500989c1de340a1bbf9dfc6de10148c79af922828e49cfc0ec7859097a9ff6a7c85cfdea4251ce89
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - connect.sid=eyJ1c2VyIjoiMjQ4MjY2ODQtOTBkNy00MWVlLWJhMGMtNGU5ODliNGY4OGE0IiwidXNlcl9pZCI6IjI0ODI2Njg0LTkwZDctNDFlZS1iYTBjLTRlOTg5YjRmODhhNCIsImNsaWVudF9pZCI6IkZDOTFCOEI4MEEyMkNFNEFCNkZCIiwiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSIsImRhdGEiOnsiYWNjb3VudF9pZCI6ImZkODRiNGU4LTVkMGMtNDBiZi1iZTE4LWJjYjk0MjM5MmNjZSJ9fQ%3D%3D--30d53eb8d2343d118578b8e8882854b9275ac477;
+        path=/; expires=Wed, 06 Feb 2013 13:27:15 GMT; httpOnly
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 Feb 2013 09:27:15 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"id":"24826684-90d7-41ee-ba0c-4e989b4f88a4","email":"kamil@railwaymen.org","first_name":"Kamil","last_name":"Backowski"},"scope":"api","status":true,"code":"ok","message":""}'
+    http_version: 
+  recorded_at: Wed, 06 Feb 2013 09:27:15 GMT
+recorded_with: VCR 2.4.0

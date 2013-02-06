@@ -1,3 +1,4 @@
+require 'instore/endpoints/me'
 require 'instore/endpoints/categories'
 require 'instore/endpoints/items'
 require 'instore/endpoints/item_sizes'
@@ -23,6 +24,10 @@ module Instore
     def initialize(access_token, options = {})
       @access_token = access_token
       @host = options[:host] || BASE_URL
+    end
+
+    def me
+      EndPoints::Me.new(@host, @access_token).fetch()
     end
 
     def categories

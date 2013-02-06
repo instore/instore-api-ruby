@@ -55,6 +55,7 @@ When creating or updating resources Instore API can return validation errors. In
 
 ## Full list of methods
        
+    instore.me()
     instore.categories.fetch(params = {})
     instore.categories.find(id)
     instore.categories.create(params)
