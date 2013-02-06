@@ -15,22 +15,6 @@ module Instore
         @options[:query][:access_token] = access_token
       end
 
-      def path
-        "#{@host}/v1/api/#{resource}"
-      end
-
-      def create_resource(params = {})
-        build_response self.class.post(path, {body: params}.merge(@options))
-      end
-
-      def update_resource(id, params = {})
-        build_response self.class.put("#{path}/#{id}", {body: params}.merge(@options))
-      end
-
-      def destroy_resource(id)
-        build_response self.class.delete("#{path}/#{id}", @options)
-      end
-
       def find(id)
         response = self.class.get("#{path}/#{id}", @options)
         build_response(response)
@@ -66,6 +50,26 @@ module Instore
       end
 
       private
+
+      def path
+        "#{@host}/v1/api/#{resource}"
+      end
+
+      def create_resource(params = {})
+        build_response self.class.post(path, {body: params}.merge(@options))
+      end
+
+      def update_resource(id, params = {})
+        build_response self.class.put("#{path}/#{id}", {body: params}.merge(@options))
+      end
+
+      def destroy_resource(id)
+        build_response self.class.delete("#{path}/#{id}", @options)
+      end
+
+      def method_missing(method, *args, &block)
+        raise Instore::UnsupportedMethod.new(method, self)
+      end
 
       def build_response(hash)
         Hashie::Mash.new(hash)

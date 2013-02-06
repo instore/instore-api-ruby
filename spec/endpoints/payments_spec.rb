@@ -6,7 +6,7 @@ describe 'Instore::Api#payments' do
  
   it 'should fetch payments' do
     VCR.use_cassette('payments/index') do
-      response = subject.payments.to_a
+      response = subject.payments.fetch
       response.should be_instance_of(Hashie::Mash)
     end
   end

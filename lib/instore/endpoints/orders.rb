@@ -3,10 +3,6 @@ require 'instore/endpoints/base'
 module Instore
   module EndPoints
     class Orders < Base
-      def resource
-        "orders"
-      end
-
       def create(params = {})
         create_resource(params)
       end
@@ -29,6 +25,12 @@ module Instore
 
       def unhold(id)
         build_response self.class.post("#{path}/#{id}/unhold_order", @options)
+      end
+
+      private
+
+      def resource
+        "orders"
       end
     end
   end

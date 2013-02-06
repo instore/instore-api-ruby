@@ -6,7 +6,7 @@ describe 'Instore::Api#special_qualities' do
 
   it 'should fetch special_qualities' do
     VCR.use_cassette('special_qualities/index') do
-      response = subject.special_qualities.to_a
+      response = subject.special_qualities.fetch
       response.should be_instance_of(Hashie::Mash)
     end
   end

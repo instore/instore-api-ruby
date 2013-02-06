@@ -6,7 +6,7 @@ describe 'Instore::Api#item_ingredients' do
 
   it 'should fetch item_ingredients' do
     VCR.use_cassette('item_ingredients/index') do
-      response = subject.item_ingredients.to_a
+      response = subject.item_ingredients.fetch
       response.should be_instance_of(Hashie::Mash)
     end
   end

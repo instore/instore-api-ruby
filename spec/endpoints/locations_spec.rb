@@ -6,7 +6,7 @@ describe 'Instore::Api#locations' do
  
   it 'should fetch locations' do
     VCR.use_cassette('locations/index') do
-      response = subject.locations.to_a
+      response = subject.locations.fetch
       response.should be_instance_of(Hashie::Mash)
     end
   end

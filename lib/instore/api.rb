@@ -88,5 +88,9 @@ module Instore
     def payments
       EndPoints::Payments.new(@host, @access_token)
     end
+
+    def method_missing(method, *args, &block)
+      raise Instore::UnsupportedMethod.new(method, self)
+    end
   end
 end

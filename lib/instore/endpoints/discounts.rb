@@ -3,10 +3,6 @@ require 'instore/endpoints/base'
 module Instore
   module EndPoints
     class Discounts < Base
-      def resource
-        "discounts"
-      end
-
       def create(params = {})
         create_resource(params)
       end
@@ -17,6 +13,12 @@ module Instore
 
       def destroy(id)
         destroy_resource(id)
+      end
+
+      private
+
+      def resource
+        "discounts"
       end
     end
   end

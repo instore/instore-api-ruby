@@ -6,7 +6,7 @@ describe 'Instore::Api#orders' do
  
   it 'should fetch orders' do
     VCR.use_cassette('orders/index') do
-      response = subject.orders.to_a
+      response = subject.orders.fetch
       response.should be_instance_of(Hashie::Mash)
     end
   end
