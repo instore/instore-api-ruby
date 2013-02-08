@@ -7,21 +7,7 @@ describe 'Instore::Api#location_groups' do
   it 'should fetch location_groups' do
     VCR.use_cassette('location_groups/index') do
       response = subject.location_groups.fetch
-      response.should be_instance_of(Hashie::Mash)
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('location_groups/index_with_limit') do
-      response = subject.location_groups.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('location_groups/index_with_limit') do
-      response = subject.location_groups.fetch(limit: 1)
-      response.next_page?.should be_true
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 

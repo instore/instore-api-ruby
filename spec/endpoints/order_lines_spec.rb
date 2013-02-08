@@ -7,21 +7,7 @@ describe 'Instore::Api#order_lines' do
   it 'should fetch order_lines' do
     VCR.use_cassette('order_lines/index') do
       response = subject.order_lines.fetch
-      response.should be_instance_of(Hashie::Mash)
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('order_lines/index_with_limit') do
-      response = subject.order_lines.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('order_lines/index_with_limit') do
-      response = subject.order_lines.fetch(limit: 1)
-      response.next_page?.should be_true
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 

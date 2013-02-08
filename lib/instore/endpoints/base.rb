@@ -1,8 +1,31 @@
-require 'hashie'
 require 'httparty'
 
 module Instore
   module EndPoints
+    class Mash
+      def initialize(attributes_hash)
+        attributes_hash.each do |name, value|
+          value = Mash.new(value) if value.is_a? Hash 
+          value = value.map { |hash| Mash.new(hash) } if value.is_a? Array 
+
+          instance_variable_set("@#{name}", value)
+          unless respond_to? name
+            self.class.instance_eval do
+              attr_reader name
+            end
+          end
+        end
+      end
+
+      def method_missing(method, *args, &block)
+        raise Instore::UnsupportedMethod.new(method, self)
+      end
+
+      def [](val)
+        public_send(val)
+      end
+    end
+
     class Base
       include ::HTTParty
       format :json
@@ -16,33 +39,14 @@ module Instore
       end
 
       def find(id)
-        response = self.class.get("#{path}/#{id}", @options)
-        build_response(response)
+        build_response(self.class.get("#{path}/#{id}", @options))
       end
 
       def fetch(params = {})
         options = @options
         options[:query].merge!(params)
 
-        response = self.class.get(path, options)
-
-        if response["paging"] && response["paging"]["previous"]
-          previous_page = !!response["paging"]["previous"]
-        else
-          previous_page = false
-        end
-
-        if response["paging"] && response["paging"]["next"]
-          next_page = !!response["paging"]["next"]
-        else
-          next_page = false
-        end
-
-        response["data"] ||= []
-
-        build_response_collection(response, 
-          previous_page?: previous_page,
-          next_page?: next_page)
+        build_response(self.class.get(path, options))
       end
 
       def to_a
@@ -72,11 +76,7 @@ module Instore
       end
 
       def build_response(hash)
-        Hashie::Mash.new(hash)
-      end
-
-      def build_response_collection(hash, options)
-        Hashie::Mash.new(hash.merge(options))
+        Mash.new(hash)
       end
     end
   end

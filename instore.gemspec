@@ -14,7 +14,6 @@ spec = Gem::Specification.new do |s|
 	s.has_rdoc = true
 	s.required_ruby_version = '>= 1.9.1'
     s.add_dependency "httparty", '~> 0.9.0'
-    s.add_dependency "hashie"
   	s.add_dependency "oauth2"
     s.add_development_dependency("rspec")
     s.add_development_dependency("webmock")

@@ -7,7 +7,7 @@ describe 'Instore::Api#unique_qualities' do
   it 'should fetch unique_qualities' do
     VCR.use_cassette('unique_qualities/index') do
       response = subject.unique_qualities.fetch
-      response.should be_instance_of(Hashie::Mash)
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 
@@ -15,20 +15,6 @@ describe 'Instore::Api#unique_qualities' do
     VCR.use_cassette('unique_qualities/show') do
       response = subject.unique_qualities.find('849e5c92-271f-48fc-ae42-38b67176b492')
       response.status.should be_true
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('unique_qualities/index_with_limit') do
-      response = subject.unique_qualities.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('unique_qualities/index_with_limit') do
-      response = subject.unique_qualities.fetch(limit: 1)
-      response.next_page?.should be_true
     end
   end
 end

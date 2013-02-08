@@ -7,7 +7,7 @@ describe 'Instore::Api#ingredients' do
   it 'should fetch ingredients' do
     VCR.use_cassette('ingredients/index') do
       response = subject.ingredients.fetch
-      response.should be_instance_of(Hashie::Mash)
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 
@@ -15,20 +15,6 @@ describe 'Instore::Api#ingredients' do
     VCR.use_cassette('ingredients/show') do
       response = subject.ingredients.find('895cc2ea-19a7-a4ef-fb3a-b266f12dc9d0')
       response.status.should be_true
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('ingredients/index_with_limit') do
-      response = subject.ingredients.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('ingredients/index_with_limit') do
-      response = subject.ingredients.fetch(limit: 1)
-      response.next_page?.should be_true
     end
   end
 

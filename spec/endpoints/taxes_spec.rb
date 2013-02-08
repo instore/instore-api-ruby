@@ -7,21 +7,7 @@ describe 'Instore::Api#taxes' do
   it 'should fetch taxes' do
     VCR.use_cassette('taxes/index') do
       response = subject.taxes.fetch
-      response.should be_instance_of(Hashie::Mash)
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('taxes/index_with_limit') do
-      response = subject.taxes.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('taxes/index_with_limit') do
-      response = subject.taxes.fetch(limit: 1)
-      response.next_page?.should be_true
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 

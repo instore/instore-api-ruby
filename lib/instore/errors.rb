@@ -6,7 +6,7 @@ module Instore
     end
 
     def message
-      methods = @object.public_methods - Object.methods
+      methods = @object.public_methods - Object.methods - Hash.methods
       "undefined method '#{@method}' for #{@object}
 Available methods : #{methods.join(", ")} "
     end

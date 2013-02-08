@@ -7,7 +7,7 @@ describe 'Instore::Api#locations' do
   it 'should fetch locations' do
     VCR.use_cassette('locations/index') do
       response = subject.locations.fetch
-      response.should be_instance_of(Hashie::Mash)
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 
@@ -15,20 +15,6 @@ describe 'Instore::Api#locations' do
     VCR.use_cassette('locations/show') do
       response = subject.locations.find('1e36bfbc-d1a8-4cce-8073-add1c6a2f3d0')
       response.status.should be_true
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('locations/index_with_limit') do
-      response = subject.locations.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('locations/index_with_limit') do
-      response = subject.locations.fetch(limit: 1)
-      response.next_page?.should be_true
     end
   end
 end

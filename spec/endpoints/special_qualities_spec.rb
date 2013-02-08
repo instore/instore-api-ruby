@@ -7,21 +7,7 @@ describe 'Instore::Api#special_qualities' do
   it 'should fetch special_qualities' do
     VCR.use_cassette('special_qualities/index') do
       response = subject.special_qualities.fetch
-      response.should be_instance_of(Hashie::Mash)
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('special_qualities/index_with_limit') do
-      response = subject.special_qualities.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('special_qualities/index_with_limit') do
-      response = subject.special_qualities.fetch(limit: 1)
-      response.next_page?.should be_true
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 

@@ -7,7 +7,7 @@ describe 'Instore::Api#me' do
   it 'should fetch information' do
     VCR.use_cassette('me/show') do
       response = subject.me
-      response.should be_instance_of(Hashie::Mash)
+      response.should be_instance_of(Instore::EndPoints::Mash)
       response.status.should be_true
     end
   end

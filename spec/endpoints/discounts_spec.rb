@@ -7,21 +7,7 @@ describe 'Instore::Api#discounts' do
   it 'should fetch discounts' do
     VCR.use_cassette('discounts/index') do
       response = subject.discounts.fetch
-      response.should be_instance_of(Hashie::Mash)
-    end
-  end
-
-  it 'should respond to previous_page?' do
-    VCR.use_cassette('discounts/index_with_limit') do
-      response = subject.discounts.fetch(limit: 1)
-      response.previous_page?.should be_false
-    end
-  end
-
-  it 'should respond to next_page?' do
-    VCR.use_cassette('discounts/index_with_limit') do
-      response = subject.discounts.fetch(limit: 1)
-      response.next_page?.should be_true
+      response.should be_instance_of(Instore::EndPoints::Mash)
     end
   end
 
