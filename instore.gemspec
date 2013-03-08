@@ -1,8 +1,9 @@
-require 'rubygems'
+$LOAD_PATH << File.expand_path("../lib", __FILE__)
+require 'instore/version'
 
 spec = Gem::Specification.new do |s|
 	s.name = 'instore'
-	s.version = '0.0.1'
+	s.version = Instore::VERSION
 	s.summary = 'Client wrapper for the Instore API'
 	s.description = 'Client wrapper for the Instore API. Exposes several endpoints that make it easy to utilize the API.'
 	s.homepage = 'https://instoredoes.com/developer'
